@@ -10,14 +10,6 @@ paths:
       operationId: PostVolgindicatiePersonen
       description: |
         Instellen volgindicatie op burgerservicenummer voor een abonnee.
-      parameters:
-        - in: query
-          name: einddatum
-          required: false
-          explode: false
-          schema:
-            type: "string"
-            format: "date"
       requestBody:
         content:
           application/json:
