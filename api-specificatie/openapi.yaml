@@ -142,7 +142,7 @@ paths:
     get:
       operationId: GetGewijzigdePersonen
       description: |
-        Opvragen lijst met gewijzigdepersonen op relevante burgerservicenummers.
+        Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.
       parameters:
         - in: query
           name: vanaf
@@ -197,42 +197,24 @@ components:
       type: object
       properties:
         _links:
-          $ref: "#/components/schemas/VolgindicatiePersonenHalCollectionLinks"
-        burgerservicenummers:
-          type: array
-          items:
-            $ref: '#/components/schemas/VolgindicatiePersonenHal'
-    VolgindicatiePersonenHalCollectionLinks:
-      type: object
-      properties:
-        self:
-          $ref: "#/components/schemas/VolgindicatiePersonenHalLink"
-    VolgindicatiePersonenHal:
-      allOf:
-        - $ref: '#/components/schemas/Burgerservicenummer'
-    VolgindicatiePersonenHalLink:
-      description: De Link Object zoals gespecificeerd in https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5
-      type: object
-      required:
-        - href
-      properties:
-        href:
-          $ref: "#/components/schemas/VolgindicatiePersonenHref"
-        title:
-         description: "Voor mens leesbaar label bij de link"
-         type: string
-    VolgindicatiePersonenHref:
-      type: string
-      example: "https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/volgindicatiepersonen"
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalCollectionLinks"
+        _embedded:
+          $ref: '#/components/schemas/VolgindicatiePersonen'
     VolgindicatiePersonen:
-      required:
-        - burgerservicenummers
       type: object
       properties:
-        burgerservicenummers:
+        volgindicatiepersonen:
           type: array
           items:
-            $ref: '#/components/schemas/Burgerservicenummer'
+            $ref: '#/components/schemas/VolgindicatiePersoon'
+    VolgindicatiePersoon:
+      type: object
+      properties:
+        burgerservicenummer:
+          $ref: '#/components/schemas/Burgerservicenummer'
+        einddatum:
+          type: "string"
+          format: "date"
     GewijzigdepersonenHalCollectie:
       type: object
       properties:
@@ -241,42 +223,14 @@ components:
         burgerservicenummers:
           type: array
           items:
-            $ref: '#/components/schemas/GewijzigdepersonenHal'
+            $ref: '#/components/schemas/Burgerservicenummer'
     GewijzigdepersonenHalCollectionLinks:
       type: object
       properties:
         self:
-          $ref: "#/components/schemas/GewijzigdepersonenHalLink"
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalLink"
         ingeschrevenPersoon:
-          $ref: "#/components/schemas/Gewijzigdepersoon_Link"
-    GewijzigdepersonenHal:
-      allOf:
-        - $ref: '#/components/schemas/Burgerservicenummer'
-    GewijzigdepersonenHalLink:
-      description: De Link Object zoals gespecificeerd in https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5
-      type: object
-      required:
-        - href
-      properties:
-        href:
-          $ref: "#/components/schemas/GewijzigdepersonenHref"
-        title:
-         description: "Voor mens leesbaar label bij de link"
-         type: string
-    Gewijzigdepersoon_Link:
-      type: object
-      properties:
-        href:
-          type: string
-          example: "https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/ingeschrevenpersonen/{burgerservicenummer}"
-        templated:
-          type: boolean
-        title:
-         description: "Voor mens leesbaar label bij de link"
-         type: string
-    GewijzigdepersonenHref:
-      type: string
-      example: "https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/gewijzigdepersonen"
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalLink"
     Burgerservicenummer:
       type: "string"
       title: "Burgerservicenummer"
