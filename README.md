@@ -15,7 +15,7 @@ Nog in te vullen.
 * Hoe u kunt [bijdragen](https://github.com/VNG-Realisatie/Tutorial/blob/master/CONTRIBUTING.md)
 * [Omgangsvormen](https://github.com/VNG-Realisatie/Tutorial/blob/master/CODE_OF_CONDUCT.md)
 * Functionele specificaties (nog in te vullen)
-* Technische specificaties (nog in te vullen)
+* [Technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/tree/master/api-specificatie) (Open API Specificaties en JSON schema) en in [Swagger-formaat](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/master/api-specificatie/openapi.yaml)
 * Ontwerpkeuzes (nog in te vullen)
 
 ## Bronnen
