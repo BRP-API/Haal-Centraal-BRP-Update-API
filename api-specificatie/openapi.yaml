@@ -9,13 +9,14 @@ info:
   version: "1.0.0"
   contact:
     url: https://github.com/JohanBoer/Haal-Centraal-BRP-Update-API
-      license:
-        name: European Union Public License, version 1.2 (EUPL-1.2)
-        url: https://eupl.eu/1.2/nl/
-  paths:
+  license:
+    name: European Union Public License, version 1.2 (EUPL-1.2)
+    url: https://eupl.eu/1.2/nl/
+paths:
   /volgindicatiepersonen:
     post:
       operationId: PostVolgindicatiePersonen
+      summary: "instellen volgindicatie"
       description: |
         Instellen volgindicatie op burgerservicenummer voor een abonnee.
       requestBody:
@@ -61,6 +62,7 @@ info:
       - volgindicatiepersonen
     get:
       operationId: GetVolgindicatiePersonen
+      summary: "raadplegen alle volgindicaties"
       description: |
         Opvragen lijst met burgerservicenummers waarop een abonnee een volgindicatie heeft ingesteld.
       responses:
@@ -104,8 +106,66 @@ info:
       tags:
       - volgindicatiepersonen
   /volgindicatiepersonen/{burgerservicenummer}:
+    get:
+      operationId: GetVolgindicatiePersoon
+      description: |
+        Opvragen specifiek abonnenement op een burgerservicenummer waarop een abonnee een volgindicatie heeft ingesteld.
+      summary: "raadpleeg specifieke volgindicatie"
+      parameters:
+        - in: path
+          name: burgerservicenummer
+          required: true
+          description: "Het burgerservicenummer, bedoeld in artikel 1.1 van de Wet\
+            \ algemene bepalingen burgerservicenummer. Alle nummers waarvoor geldt\
+            \ dat, indien aangeduid als (s0 s1 s2 s3 s4 s5 s6 s7 s8), het resultaat\
+            \ van (9*s0) + (8*s1) + (7*s2) +...+ (2*s7) - (1*s8) deelbaar is door\
+            \ elf. Er moeten dus 9 cijfers aanwezig zijn."
+          explode: false
+          schema:
+            $ref: "#/components/schemas/Burgerservicenummer"
+      responses:
+        200:
+          description: "OK"
+          headers:
+            api-version:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/api_version"
+            warning:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
+            X-Rate-Limit-Limit:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/master/api-specificatie/common.yaml#/components/headers/X_Rate_Limit_Limit"
+            X-Rate-Limit-Remaining:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/master/api-specificatie/common.yaml#/components/headers/X_Rate_Limit_Remaining"
+            X-Rate-Limit-Reset:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/master/api-specificatie/common.yaml#/components/headers/X_Rate_Limit_Reset"
+          content:
+            application/hal+json:
+              schema:
+                $ref: "#/components/schemas/VolgindicatiePersoon"
+        '400':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/400"
+        '401':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/401"
+        '403':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/403"
+        '406':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/406"
+        '409':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/409"
+        '410':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/410"
+        '415':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/415"
+        '429':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/429"
+        '500':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/500"
+        '503':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/503"
+      tags:
+      - volgindicatiepersonen
     delete:
       operationId: DeleteVolgindicatiePersonen
+      summary: "verwijder volgindicatie"
       description: |
         Beëindigen volgindicatie op burgerservicenummer voor een abonnee.
       parameters:
