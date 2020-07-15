@@ -131,7 +131,7 @@ info:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/VolgindicatiePersonen"
+                $ref: "#/components/schemas/VolgindicatiePersoon"
         '204':
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/204"
         '404':
