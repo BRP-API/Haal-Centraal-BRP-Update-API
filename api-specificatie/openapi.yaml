@@ -1,10 +1,18 @@
 openapi: 3.0.0
+servers:
+  - description: "SwaggerHub API Auto Mocking"
+    url: https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api
 info:
   title: "BRP Update API"
-  version: "1.0.0"
   description: |
         Het instellen van volgindicaties op ingeschrevenpersonen, het beëindigen van die volgindicaties, het opvragen van alle van voor een abonnee ingestelde volgindicaties en het opvragen van de aanwezigheid van wijzigingen op ingeschrevenpersonen.
-paths:
+  version: "1.0.0"
+  contact:
+    url: https://github.com/JohanBoer/Haal-Centraal-BRP-Update-API
+      license:
+        name: European Union Public License, version 1.2 (EUPL-1.2)
+        url: https://eupl.eu/1.2/nl/
+  paths:
   /volgindicatiepersonen:
     post:
       operationId: PostVolgindicatiePersonen
