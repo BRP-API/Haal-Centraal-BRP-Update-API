@@ -204,9 +204,6 @@ components:
       properties:
         burgerservicenummer:
           $ref: '#/components/schemas/Burgerservicenummer'
-        einddatum:
-          type: "string"
-          format: "date"
     GewijzigdepersonenHalCollectie:
       type: object
       properties:
