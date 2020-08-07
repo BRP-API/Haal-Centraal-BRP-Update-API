@@ -141,7 +141,7 @@ paths:
       operationId: DeleteVolgindicatie
       description: |
         Verwijderen van een volgindicatie van een specifieke persoon.
-      summary: "Toevoegen of wijzigen volgindicatie"
+      summary: "Verwijderen volgindicatie"
       parameters:
         - $ref: '#/components/parameters/burgerservicenummer'
       responses:
