@@ -169,7 +169,7 @@ paths:
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/default"
       tags:
       - Beheren volgindicaties
-  /gewijzigdepersonen:
+  /wijzigingen:
     get:
       operationId: GetGewijzigdePersonen
       description: |
@@ -210,7 +210,7 @@ paths:
         'default':
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/default"
       tags:
-      - Gewijzigde personen
+      - Raadplegen gewijzigde personen
 components:
   parameters:
     burgerservicenummer:
