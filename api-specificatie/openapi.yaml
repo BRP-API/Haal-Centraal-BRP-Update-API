@@ -5,8 +5,7 @@ servers:
     url: https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api
 info:
   title: "BRP Update API"
-  description: "Deze API biedt functionaliteit voor het opvragen van  wijzigingen op ingeschreven personen die door de gebruiker worden gevolgd vanaf een bepaald moment. Dit kan gebruikt worden om een kopie aan te leggen van de actuele registratie van specifieke personen.<br/>
-        De API biedt functionaliteit waarmee kan worden aangegeven welke personen worden gevolgd."
+  description: "Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden."
   version: "1.0.0"
   contact:
     url: https://github.com/JohanBoer/Haal-Centraal-BRP-Update-API
