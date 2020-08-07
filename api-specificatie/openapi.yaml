@@ -173,6 +173,7 @@ paths:
       operationId: GetGewijzigdePersonen
       description: |
         Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.
+      summary: "Raadplegen personen met gewijzigde gegevens"
       parameters:
         - in: query
           name: vanaf
