@@ -50,7 +50,7 @@ paths:
       operationId: GetVolgindicatie
       description: |
         Opvragen van een volgindicatie van een specifieke persoon.
-      summary: "Raadpleeg specifieke volgindicatie"
+      summary: "Raadplegen specifieke volgindicatie"
       parameters:
         - $ref: '#/components/parameters/burgerservicenummer'
       responses:
@@ -217,8 +217,7 @@ components:
       in: path
       name: burgerservicenummer
       required: true
-      description: "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet\
-        \ algemene bepalingen burgerservicenummer."
+      description: "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer."
       schema:
         pattern: "^[0-9]*$"
         maxLength: 9
@@ -251,14 +250,22 @@ components:
       properties:
         self:
           $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.1.0/api-specificatie/common.yaml#/components/schemas/HalLink'
-    VolgindicatieHal:
+    VolgindicatieRaadplegen:
       allOf:
         - $ref: '#/components/schemas/Volgindicatie'
+        - properties:
+            burgerservicenummer:
+              type: string
+              description: "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer."
+    VolgindicatieHal:
+      allOf:
+        - $ref: '#/components/schemas/VolgindicatieRaadplegen'
         - properties:
             _links:
               $ref: '#/components/schemas/Volgindicatie_links'
           example:
             einddatum: '2022-10-24'
+            burgerservicenummer: '555555021'
             _links:
               self:
                 href: '/volgindicaties/555555021'
