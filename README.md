@@ -1,6 +1,6 @@
 # Haal-Centraal-BRP-Update-API
 
-BRP Update is een Haal Centraal API voor het abonneren op en het verkrijgen van wijzigingsnotificaties van ingeschreven natuurlijke personen voor alle binnengemeentelijke afnemers in NL.
+Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.
 
 # Planning
 https://eu-rm.roadmunk.com/publish/29a13c572a0dfc79f1d0386fc572e15383afe11f
