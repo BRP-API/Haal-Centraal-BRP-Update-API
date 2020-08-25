@@ -28,9 +28,9 @@ paths:
             warning:
               $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
           content:
-            application/hal+json:
+            application/json:
               schema:
-                $ref: "#/components/schemas/VolgindicatiesHalCollectie"
+                $ref: "#/components/schemas/VolgindicatieCollectie"
         '401':
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/401"
         '403':
@@ -62,9 +62,9 @@ paths:
             warning:
               $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
           content:
-            application/hal+json:
+            application/json:
               schema:
-                $ref: "#/components/schemas/VolgindicatieHal"
+                $ref: "#/components/schemas/VolgindicatieRaadplegen"
         '400':
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/400"
         '401':
@@ -108,9 +108,9 @@ paths:
             warning:
               $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
           content:
-            application/hal+json:
+            application/json:
               schema:
-                $ref: "#/components/schemas/VolgindicatieHal"
+                $ref: "#/components/schemas/VolgindicatieRaadplegen"
         '201':
           description: "Volgindicatie toegevoegd"
           headers:
@@ -121,7 +121,7 @@ paths:
           content:
             application/hal+json:
               schema:
-                $ref: '#/components/schemas/VolgindicatieHal'
+                $ref: '#/components/schemas/VolgindicatieRaadplegen'
         '400':
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/400"
         '401':
@@ -196,20 +196,13 @@ components:
         minLength: 9
         example: "555555021"
   schemas:
-    VolgindicatiesHalCollectie:
-      type: object
-      properties:
-        _links:
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalCollectionLinks"
-        _embedded:
-          $ref: '#/components/schemas/VolgindicatiesHal'
-    VolgindicatiesHal:
+    VolgindicatieCollectie:
       type: object
       properties:
         volgindicaties:
           type: array
           items:
-            $ref: '#/components/schemas/VolgindicatieHal'
+            $ref: '#/components/schemas/VolgindicatieRaadplegen'
     Volgindicatie:
       type: object
       properties:
@@ -217,11 +210,6 @@ components:
           type: "string"
           format: "date"
           description: "Datum vanaf wanneer de volgindicatie niet meer actief zal zijn."
-    Volgindicatie_links:
-      type: object
-      properties:
-        self:
-          $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.1.0/api-specificatie/common.yaml#/components/schemas/HalLink'
     VolgindicatieRaadplegen:
       allOf:
         - $ref: '#/components/schemas/Volgindicatie'
@@ -229,18 +217,6 @@ components:
             burgerservicenummer:
               type: string
               description: "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer."
-    VolgindicatieHal:
-      allOf:
-        - $ref: '#/components/schemas/VolgindicatieRaadplegen'
-        - properties:
-            _links:
-              $ref: '#/components/schemas/Volgindicatie_links'
-          example:
-            einddatum: '2022-10-24'
-            burgerservicenummer: '555555021'
-            _links:
-              self:
-                href: '/volgindicaties/555555021'
     GewijzigdepersonenHalCollectie:
       type: object
       properties:
