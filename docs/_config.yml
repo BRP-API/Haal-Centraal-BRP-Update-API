@@ -1,0 +1,3 @@
+baseurl: "/Haal-Centraal-BRP-Update-API"
+apiname: "BRP Update API"
+url: "http://localhost:4000"
