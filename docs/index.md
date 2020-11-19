@@ -2,33 +2,30 @@
 layout: page-with-side-nav
 title: Haal Centraal BRP tabellen bevragen
 ---
-# Haal-Centraal-BRP-Update-API
+# Haal Centraal BRP update
+![lint oas](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/lint-oas/badge.svg)
+![generate sdks](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/generate-sdks/badge.svg)
+![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/generate-postman-collection/badge.svg)
 
-Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.
+API waarmee je kan opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de [BRP bevragen API](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"}, bijvoorbeeld om lokale kopiegegevens actueel te houden.
 
-# Planning
-https://eu-rm.roadmunk.com/publish/29a13c572a0dfc79f1d0386fc572e15383afe11f
+## Direct aan de slag?
+* Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/swagger-ui) of [Redoc](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/redoc)
+* Lees de [Getting started](./getting-started)
+* Download de [technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}
+* Download [client code](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/tree/master/code){:target="_blank" rel="noopener"}
+* Vraag een API-key voor toegang tot de Haal Centraal probeeromgeving aan bij de product owner [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
 
-## Getting started
-Nog in te vullen.
-
-## Documentatie
-* Productvisie (nog in te vullen)
-* [Definition of Ready](https://github.com/VNG-Realisatie/RSGB-bevragingen/blob/master/docs/definition_of_ready.md)
-* [Definition of Done](https://github.com/VNG-Realisatie/RSGB-bevragingen/blob/master/docs/definition_of_done.md)
-* Hoe u kunt [bijdragen](https://github.com/VNG-Realisatie/Tutorial/blob/master/CONTRIBUTING.md)
-* [Omgangsvormen](https://github.com/VNG-Realisatie/Tutorial/blob/master/CODE_OF_CONDUCT.md)
-* Functionele specificaties (nog in te vullen)
-* [Technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/tree/master/api-specificatie) (Open API Specificaties en JSON schema) en in [Swagger-formaat](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/master/api-specificatie/openapi.yaml)
-* Ontwerpkeuzes (nog in te vullen)
+## Heb je meer nodig? 
+Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"} om de gewijzigde gegevens van een persoon op te halen.
 
 ## Bronnen
-* [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/)
 
-## Contactpersonen:
-* Product owner: [@CathyDingemanse](https://github.com/CathyDingemanse)
-* Berichtontwerper: [@melsk-r](https://github.com/melsk-r)
-* Scrum Master: Saskia Hoff saskia.hoff@vng.nl
+* [Productvisie Haal Centraal](https://vng-realisatie.github.io/Haal-Centraal){:target="_blank" rel="noopener"}
+* [API Design Visie](https://github.com/Geonovum/KP-APIs/tree/master/Werkgroep%20Design%20Visie){:target="_blank" rel="noopener"}
+* [REST API Design Rules](https://docs.geostandaarden.nl/api/API-Designrules/){:target="_blank" rel="noopener"}
+* [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/){:target="_blank" rel="noopener"}
+
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
