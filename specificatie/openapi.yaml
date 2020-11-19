@@ -20,7 +20,7 @@ paths:
       description: |
         Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd.
       responses:
-        200:
+        '200':
           description: "OK"
           headers:
             api-version:
@@ -54,7 +54,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/burgerservicenummer'
       responses:
-        200:
+        '200':
           description: "OK"
           headers:
             api-version:
@@ -156,7 +156,7 @@ paths:
             type: "string"
             format: "date"
       responses:
-        200:
+        '200':
           description: "OK"
           headers:
             api-version:
