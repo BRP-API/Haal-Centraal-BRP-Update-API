@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "oas:generate-client": "openapi-generator generate -i ./specificatie/genereervariant/openapi.yaml --global-property=modelTests=false,apiTests=false,modelDocs=false,apiDocs=false",
+    "oas:generate-client": "openapi-generator-cli generate -i ./specificatie/genereervariant/openapi.yaml --global-property=modelTests=false,apiTests=false,modelDocs=false,apiDocs=false",
     "oas:generate-java-client": "npm run oas:generate-client -- -o ./code/java -g java --additional-properties=dateLibrary=java8,java8=true,optionalProjectFile=false,optionalAssemblyInfo=false",
     "oas:generate-netcore-client": "npm run oas:generate-client -- -o ./code/netcore -g csharp-netcore --additional-properties=optionalProjectFile=false,optionalAssemblyInfo=false",
     "oas:generate-net-client": "npm run oas:generate-client -- -o ./code/net -g csharp --additional-properties=optionalProjectFile=false,optionalAssemblyInfo=false",
