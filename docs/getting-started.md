@@ -3,7 +3,6 @@ layout: page-with-side-nav
 title: Getting Started
 ---
 # Getting Started
-
 De 'BRP update' Web API is gespecificeerd in [OpenAPI specifications (OAS)](https://swagger.io/specification/).
 
 Wil je de API gebruiken? Dit kun je doen:
@@ -38,6 +37,3 @@ Voor enkele ontwikkelomgevingen is al [client code](https://github.com/VNG-Reali
 
 ## Probeer en test
 Op de Haal Centraal demo-omgeving (www.haalcentraal.nl/haalcentraal/api/) is de BRP update API nog niet beschikbaar.
-
-
-
