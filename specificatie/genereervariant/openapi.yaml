@@ -1,0 +1,810 @@
+openapi: 3.0.0
+info:
+  title: BRP Update API
+  description: Met deze API kun je opvragen welke door jou gevolgde personen zijn
+    gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en
+    je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken
+    in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel
+    te houden.
+  contact:
+    url: https://github.com/JohanBoer/Haal-Centraal-BRP-Update-API
+  license:
+    name: European Union Public License, version 1.2 (EUPL-1.2)
+    url: https://eupl.eu/1.2/nl/
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api
+  description: SwaggerHub API Auto Mocking
+paths:
+  /volgindicaties:
+    get:
+      tags:
+      - Beheren volgindicaties
+      summary: Raadplegen alle actieve volgindicaties
+      description: |
+        Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd.
+      operationId: GetVolgindicaties
+      responses:
+        "200":
+          description: OK
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+            warning:
+              $ref: '#/components/headers/warning'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VolgindicatieCollectie'
+        "401":
+          description: Unauthorized
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2
+                  401 Unauthorized
+                title: Niet correct geauthenticeerd.
+                status: 401
+                detail: The request requires user authentication. The response MUST
+                  include a WWW-Authenticate header field (section 14.47) containing
+                  a challenge applicable to the requested resource.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: authentication
+        "403":
+          description: Forbidden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4
+                  403 Forbidden
+                title: U bent niet geautoriseerd voor deze operatie.
+                status: 403
+                detail: The server understood the request, but is refusing to fulfill
+                  it.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: autorisation
+        "406":
+          description: Not Acceptable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7
+                  406 Not Acceptable
+                title: Gevraagde contenttype wordt niet ondersteund.
+                status: 406
+                detail: The resource identified by the request is only capable of
+                  generating response entities which have content characteristics
+                  not acceptable according to thr accept headers sent in the request
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAcceptable
+        "500":
+          description: Internal Server Error
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1
+                  500 Internal server error
+                title: Interne server fout.
+                status: 500
+                detail: The server encountered an unexpected condition which prevented
+                  it from fulfilling the request.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: serverError
+        "503":
+          description: Service Unavailable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4
+                  503 Service Unavailable
+                title: Bronservice {bron} is tijdelijk niet beschikbaar.
+                status: 503
+                detail: The service is currently unable to handle the request due
+                  to a temporary overloading or maintenance of the server.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAvailable
+        default:
+          description: Er is een onverwachte fout opgetreden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+  /volgindicaties/{burgerservicenummer}:
+    get:
+      tags:
+      - Beheren volgindicaties
+      summary: Raadplegen specifieke volgindicatie
+      description: |
+        Opvragen van een volgindicatie van een specifieke persoon.
+      operationId: GetVolgindicatie
+      parameters:
+      - name: burgerservicenummer
+        in: path
+        description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
+          als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          maxLength: 9
+          minLength: 9
+          pattern: ^[0-9]*$
+          example: "555555021"
+      responses:
+        "200":
+          description: OK
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+            warning:
+              $ref: '#/components/headers/warning'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VolgindicatieRaadplegen'
+        "400":
+          description: Bad Request
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/BadRequestFoutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.1
+                  400 Bad Request
+                title: Ten minste één parameter moet worden opgegeven.
+                status: 400
+                detail: The request could not be understood by the server due to malformed
+                  syntax. The client SHOULD NOT repeat the request without modification.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: paramsRequired
+                invalidParams:
+                - type: https://www.vng.nl/realisatie/api/validaties/integer
+                  name: verblijfplaats__huisnummer
+                  code: integer
+                  reason: Waarde is geen geldige integer.
+        "401":
+          description: Unauthorized
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2
+                  401 Unauthorized
+                title: Niet correct geauthenticeerd.
+                status: 401
+                detail: The request requires user authentication. The response MUST
+                  include a WWW-Authenticate header field (section 14.47) containing
+                  a challenge applicable to the requested resource.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: authentication
+        "403":
+          description: Forbidden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4
+                  403 Forbidden
+                title: U bent niet geautoriseerd voor deze operatie.
+                status: 403
+                detail: The server understood the request, but is refusing to fulfill
+                  it.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: autorisation
+        "404":
+          description: Not Found
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.5
+                  404 Not Found
+                title: Opgevraagde resource bestaat niet.
+                status: 404
+                detail: The server has not found anything matching the Request-URI.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notFound
+        "406":
+          description: Not Acceptable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7
+                  406 Not Acceptable
+                title: Gevraagde contenttype wordt niet ondersteund.
+                status: 406
+                detail: The resource identified by the request is only capable of
+                  generating response entities which have content characteristics
+                  not acceptable according to thr accept headers sent in the request
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAcceptable
+        "500":
+          description: Internal Server Error
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1
+                  500 Internal server error
+                title: Interne server fout.
+                status: 500
+                detail: The server encountered an unexpected condition which prevented
+                  it from fulfilling the request.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: serverError
+        "503":
+          description: Service Unavailable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4
+                  503 Service Unavailable
+                title: Bronservice {bron} is tijdelijk niet beschikbaar.
+                status: 503
+                detail: The service is currently unable to handle the request due
+                  to a temporary overloading or maintenance of the server.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAvailable
+        default:
+          description: Er is een onverwachte fout opgetreden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+    put:
+      tags:
+      - Beheren volgindicaties
+      summary: Toevoegen, wijzigen of beëindigen volgindicatie
+      description: |
+        Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.
+
+        De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.
+
+        Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren.
+      operationId: UpsertVolgindicatie
+      parameters:
+      - name: burgerservicenummer
+        in: path
+        description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
+          als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          maxLength: 9
+          minLength: 9
+          pattern: ^[0-9]*$
+          example: "555555021"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Volgindicatie'
+      responses:
+        "200":
+          description: Volgindicatie gewijzigd
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+            warning:
+              $ref: '#/components/headers/warning'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VolgindicatieRaadplegen'
+        "201":
+          description: Volgindicatie toegevoegd
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+            warning:
+              $ref: '#/components/headers/warning'
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/VolgindicatieRaadplegen'
+        "400":
+          description: Bad Request
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/BadRequestFoutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.1
+                  400 Bad Request
+                title: Ten minste één parameter moet worden opgegeven.
+                status: 400
+                detail: The request could not be understood by the server due to malformed
+                  syntax. The client SHOULD NOT repeat the request without modification.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: paramsRequired
+                invalidParams:
+                - type: https://www.vng.nl/realisatie/api/validaties/integer
+                  name: verblijfplaats__huisnummer
+                  code: integer
+                  reason: Waarde is geen geldige integer.
+        "401":
+          description: Unauthorized
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2
+                  401 Unauthorized
+                title: Niet correct geauthenticeerd.
+                status: 401
+                detail: The request requires user authentication. The response MUST
+                  include a WWW-Authenticate header field (section 14.47) containing
+                  a challenge applicable to the requested resource.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: authentication
+        "403":
+          description: Forbidden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4
+                  403 Forbidden
+                title: U bent niet geautoriseerd voor deze operatie.
+                status: 403
+                detail: The server understood the request, but is refusing to fulfill
+                  it.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: autorisation
+        "406":
+          description: Not Acceptable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7
+                  406 Not Acceptable
+                title: Gevraagde contenttype wordt niet ondersteund.
+                status: 406
+                detail: The resource identified by the request is only capable of
+                  generating response entities which have content characteristics
+                  not acceptable according to thr accept headers sent in the request
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAcceptable
+        "415":
+          description: Unsupported Media Type
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.16
+                  415 Unsupported Media Type
+                title: Unsupported Media Type
+                status: 415
+                detail: The server is refusing the request because the entity of the
+                  request is in a format not supported by the requested resource for
+                  the requested method.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: unsupported
+        "500":
+          description: Internal Server Error
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1
+                  500 Internal server error
+                title: Interne server fout.
+                status: 500
+                detail: The server encountered an unexpected condition which prevented
+                  it from fulfilling the request.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: serverError
+        "503":
+          description: Service Unavailable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4
+                  503 Service Unavailable
+                title: Bronservice {bron} is tijdelijk niet beschikbaar.
+                status: 503
+                detail: The service is currently unable to handle the request due
+                  to a temporary overloading or maintenance of the server.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAvailable
+        default:
+          description: Er is een onverwachte fout opgetreden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+  /wijzigingen:
+    get:
+      tags:
+      - Raadplegen gewijzigde personen
+      summary: Raadplegen personen met gewijzigde gegevens
+      description: |
+        Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.
+      operationId: GetGewijzigdePersonen
+      parameters:
+      - name: vanaf
+        in: query
+        description: Alleen personen waarbij gegevens zijn gewijzigd op of na deze
+          datum worden geleverd.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+          format: date
+      responses:
+        "200":
+          description: OK
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+            warning:
+              $ref: '#/components/headers/warning'
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/GewijzigdepersonenHalCollectie'
+        "400":
+          description: Bad Request
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/BadRequestFoutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.1
+                  400 Bad Request
+                title: Ten minste één parameter moet worden opgegeven.
+                status: 400
+                detail: The request could not be understood by the server due to malformed
+                  syntax. The client SHOULD NOT repeat the request without modification.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: paramsRequired
+                invalidParams:
+                - type: https://www.vng.nl/realisatie/api/validaties/integer
+                  name: verblijfplaats__huisnummer
+                  code: integer
+                  reason: Waarde is geen geldige integer.
+        "401":
+          description: Unauthorized
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2
+                  401 Unauthorized
+                title: Niet correct geauthenticeerd.
+                status: 401
+                detail: The request requires user authentication. The response MUST
+                  include a WWW-Authenticate header field (section 14.47) containing
+                  a challenge applicable to the requested resource.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: authentication
+        "403":
+          description: Forbidden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4
+                  403 Forbidden
+                title: U bent niet geautoriseerd voor deze operatie.
+                status: 403
+                detail: The server understood the request, but is refusing to fulfill
+                  it.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: autorisation
+        "406":
+          description: Not Acceptable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7
+                  406 Not Acceptable
+                title: Gevraagde contenttype wordt niet ondersteund.
+                status: 406
+                detail: The resource identified by the request is only capable of
+                  generating response entities which have content characteristics
+                  not acceptable according to thr accept headers sent in the request
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAcceptable
+        "500":
+          description: Internal Server Error
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1
+                  500 Internal server error
+                title: Interne server fout.
+                status: 500
+                detail: The server encountered an unexpected condition which prevented
+                  it from fulfilling the request.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: serverError
+        "503":
+          description: Service Unavailable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4
+                  503 Service Unavailable
+                title: Bronservice {bron} is tijdelijk niet beschikbaar.
+                status: 503
+                detail: The service is currently unable to handle the request due
+                  to a temporary overloading or maintenance of the server.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAvailable
+        default:
+          description: Er is een onverwachte fout opgetreden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+components:
+  schemas:
+    VolgindicatieCollectie:
+      type: object
+      properties:
+        volgindicaties:
+          type: array
+          items:
+            $ref: '#/components/schemas/VolgindicatieRaadplegen'
+    Volgindicatie:
+      type: object
+      properties:
+        einddatum:
+          type: string
+          description: Datum vanaf wanneer de volgindicatie niet meer actief zal zijn.
+          format: date
+    VolgindicatieRaadplegen:
+      allOf:
+      - $ref: '#/components/schemas/Volgindicatie'
+      - properties:
+          burgerservicenummer:
+            type: string
+            description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
+              als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+    GewijzigdepersonenHalCollectie:
+      type: object
+      properties:
+        _links:
+          $ref: '#/components/schemas/GewijzigdepersonenHalCollectionLinks'
+        burgerservicenummers:
+          type: array
+          items:
+            type: string
+            description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
+              als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+            example: "555555021"
+    GewijzigdepersonenHalCollectionLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/HalLink'
+        ingeschrevenPersoon:
+          $ref: '#/components/schemas/HalLink'
+    Foutbericht:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Link naar meer informatie over deze fout
+          format: uri
+        title:
+          type: string
+          description: Beschrijving van de fout
+        status:
+          type: integer
+          description: Http status code
+        detail:
+          type: string
+          description: Details over de fout
+        instance:
+          type: string
+          description: Uri van de aanroep die de fout heeft veroorzaakt
+          format: uri
+        code:
+          minLength: 1
+          type: string
+          description: Systeemcode die het type fout aangeeft
+      description: Terugmelding bij een fout. JSON representatie in lijn met [RFC7807](https://tools.ietf.org/html/rfc7807).
+    BadRequestFoutbericht:
+      allOf:
+      - $ref: '#/components/schemas/Foutbericht'
+      - type: object
+        properties:
+          invalidParams:
+            type: array
+            description: Foutmelding per fout in een parameter. Alle gevonden fouten
+              worden één keer teruggemeld.
+            items:
+              $ref: '#/components/schemas/InvalidParams'
+    InvalidParams:
+      type: object
+      properties:
+        type:
+          type: string
+          format: uri
+          example: https://www.vng.nl/realisatie/api/{major-versie}/validaties/integer
+        name:
+          type: string
+          description: Naam van de parameter
+          example: verblijfplaats__huisnummer
+        code:
+          minLength: 1
+          type: string
+          description: Systeemcode die het type fout aangeeft
+          example: integer
+        reason:
+          type: string
+          description: Beschrijving van de fout op de parameterwaarde
+          example: Waarde is geen geldige integer.
+      description: Details over fouten in opgegeven parameters
+    HalLink:
+      required:
+      - href
+      type: object
+      properties:
+        href:
+          $ref: '#/components/schemas/Href'
+        templated:
+          type: boolean
+        title:
+          type: string
+          description: Voor mens leesbaar label bij de link
+      description: De Link Object zoals gespecificeerd in https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5
+    Href:
+      type: string
+      example: https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}
+  parameters:
+    burgerservicenummer:
+      name: burgerservicenummer
+      in: path
+      description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
+        als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+      required: true
+      style: simple
+      explode: false
+      schema:
+        maxLength: 9
+        minLength: 9
+        pattern: ^[0-9]*$
+        example: "555555021"
+  headers:
+    api_version:
+      schema:
+        type: string
+        description: Geeft een specifieke API-versie aan in de context van een specifieke
+          aanroep.
+        example: 1.0.0
+    warning:
+      schema:
+        type: string
+        description: zie RFC 7234. In het geval een major versie wordt uitgefaseerd,
+          gebruiken we warn-code 299 ("Miscellaneous Persistent Warning") en het API
+          end-point (inclusief versienummer) als de warn-agent van de warning, gevolgd
+          door de warn-text met de human-readable waarschuwing
+        example: '299 https://service.../api/.../v1 "Deze versie van de API is verouderd
+          en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie
+          hier de documentatie: https://omgevingswet.../api/.../v1".'
