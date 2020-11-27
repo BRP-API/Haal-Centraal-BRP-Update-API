@@ -2,14 +2,14 @@
 layout: page-with-side-nav
 title: Haal Centraal BRP tabellen bevragen
 ---
-# Haal Centraal BRP update
+# Haal Centraal BRP update API
 ![lint oas](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/lint-oas/badge.svg)
 ![generate sdks](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/generate-sdks/badge.svg)
 ![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/generate-postman-collection/badge.svg)
 
-API waarmee je kan opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de [BRP bevragen API](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"}, bijvoorbeeld om lokale kopiegegevens actueel te houden.
+Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van personen. Bedoeld voor gebruik in combinatie met de [BRP bevragen API](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"}, bijvoorbeeld om (tijdelijk) lokale kopiegegevens actueel te houden.
 
-## Direct aan de slag?
+## Direct uitproberen?
 * Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/swagger-ui) of [Redoc](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/redoc)
 * Lees de [Getting started](./getting-started)
 * Download de [technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}
@@ -26,6 +26,13 @@ Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://vng-re
 * [REST API Design Rules](https://docs.geostandaarden.nl/api/API-Designrules/){:target="_blank" rel="noopener"}
 * [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/){:target="_blank" rel="noopener"}
 
+## Contact
+
+* Product Owner: Cathy Dingemanse, [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
+* Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
+* Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
+* Customer zero: Melvin Lee, [melvin.lee@iswish.nl](mailto:melvin.lee@iswish.nl)
+* Tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@denhaag.nl)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
