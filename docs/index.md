@@ -8,7 +8,6 @@ title: Haal Centraal BRP tabellen bevragen
 ![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/generate-postman-collection/badge.svg)
 
 Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van personen. Bedoeld voor gebruik in combinatie met de [BRP bevragen API](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"}, bijvoorbeeld om (tijdelijk) lokale kopiegegevens actueel te houden.
-
 De API wordt nog niet door RvIG aangeboden. Om de migratie naar API's te versnellen besluiten sommige gemeenten de API zelf aan te bieden.  
 
 ## Direct uitproberen?
