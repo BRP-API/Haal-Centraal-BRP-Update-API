@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using Org.OpenAPITools.Client;
 using Org.OpenAPITools.Model;
@@ -33,7 +34,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <returns>VolgindicatieRaadplegen</returns>
-        VolgindicatieRaadplegen GetVolgindicatie (AnyType burgerservicenummer);
+        VolgindicatieRaadplegen GetVolgindicatie (Object burgerservicenummer);
 
         /// <summary>
         /// Raadplegen specifieke volgindicatie
@@ -44,7 +45,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <returns>ApiResponse of VolgindicatieRaadplegen</returns>
-        ApiResponse<VolgindicatieRaadplegen> GetVolgindicatieWithHttpInfo (AnyType burgerservicenummer);
+        ApiResponse<VolgindicatieRaadplegen> GetVolgindicatieWithHttpInfo (Object burgerservicenummer);
         /// <summary>
         /// Raadplegen alle actieve volgindicaties
         /// </summary>
@@ -74,7 +75,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
         /// <returns>VolgindicatieRaadplegen</returns>
-        VolgindicatieRaadplegen UpsertVolgindicatie (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie));
+        VolgindicatieRaadplegen UpsertVolgindicatie (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie));
 
         /// <summary>
         /// Toevoegen, wijzigen of beëindigen volgindicatie
@@ -86,7 +87,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
         /// <returns>ApiResponse of VolgindicatieRaadplegen</returns>
-        ApiResponse<VolgindicatieRaadplegen> UpsertVolgindicatieWithHttpInfo (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie));
+        ApiResponse<VolgindicatieRaadplegen> UpsertVolgindicatieWithHttpInfo (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -97,8 +98,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VolgindicatieRaadplegen</returns>
-        System.Threading.Tasks.Task<VolgindicatieRaadplegen> GetVolgindicatieAsync (AnyType burgerservicenummer);
+        System.Threading.Tasks.Task<VolgindicatieRaadplegen> GetVolgindicatieAsync (Object burgerservicenummer, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Raadplegen specifieke volgindicatie
@@ -108,8 +110,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VolgindicatieRaadplegen)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> GetVolgindicatieAsyncWithHttpInfo (AnyType burgerservicenummer);
+        System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> GetVolgindicatieWithHttpInfoAsync (Object burgerservicenummer, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Raadplegen alle actieve volgindicaties
         /// </summary>
@@ -117,8 +120,9 @@ namespace Org.OpenAPITools.Api
         /// Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VolgindicatieCollectie</returns>
-        System.Threading.Tasks.Task<VolgindicatieCollectie> GetVolgindicatiesAsync ();
+        System.Threading.Tasks.Task<VolgindicatieCollectie> GetVolgindicatiesAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Raadplegen alle actieve volgindicaties
@@ -127,8 +131,9 @@ namespace Org.OpenAPITools.Api
         /// Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VolgindicatieCollectie)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VolgindicatieCollectie>> GetVolgindicatiesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<VolgindicatieCollectie>> GetVolgindicatiesWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Toevoegen, wijzigen of beëindigen volgindicatie
         /// </summary>
@@ -138,8 +143,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VolgindicatieRaadplegen</returns>
-        System.Threading.Tasks.Task<VolgindicatieRaadplegen> UpsertVolgindicatieAsync (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie));
+        System.Threading.Tasks.Task<VolgindicatieRaadplegen> UpsertVolgindicatieAsync (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Toevoegen, wijzigen of beëindigen volgindicatie
@@ -150,8 +156,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VolgindicatieRaadplegen)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> UpsertVolgindicatieAsyncWithHttpInfo (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie));
+        System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> UpsertVolgindicatieWithHttpInfoAsync (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -269,7 +276,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <returns>VolgindicatieRaadplegen</returns>
-        public VolgindicatieRaadplegen GetVolgindicatie (AnyType burgerservicenummer)
+        public VolgindicatieRaadplegen GetVolgindicatie (Object burgerservicenummer)
         {
              ApiResponse<VolgindicatieRaadplegen> localVarResponse = GetVolgindicatieWithHttpInfo(burgerservicenummer);
              return localVarResponse.Data;
@@ -281,7 +288,7 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <returns>ApiResponse of VolgindicatieRaadplegen</returns>
-        public ApiResponse<VolgindicatieRaadplegen> GetVolgindicatieWithHttpInfo (AnyType burgerservicenummer)
+        public ApiResponse<VolgindicatieRaadplegen> GetVolgindicatieWithHttpInfo (Object burgerservicenummer)
         {
             // verify the required parameter 'burgerservicenummer' is set
             if (burgerservicenummer == null)
@@ -335,10 +342,11 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VolgindicatieRaadplegen</returns>
-        public async System.Threading.Tasks.Task<VolgindicatieRaadplegen> GetVolgindicatieAsync (AnyType burgerservicenummer)
+        public async System.Threading.Tasks.Task<VolgindicatieRaadplegen> GetVolgindicatieAsync (Object burgerservicenummer, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<VolgindicatieRaadplegen> localVarResponse = await GetVolgindicatieAsyncWithHttpInfo(burgerservicenummer);
+             ApiResponse<VolgindicatieRaadplegen> localVarResponse = await GetVolgindicatieWithHttpInfoAsync(burgerservicenummer, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -348,8 +356,9 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VolgindicatieRaadplegen)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> GetVolgindicatieAsyncWithHttpInfo (AnyType burgerservicenummer)
+        public async System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> GetVolgindicatieWithHttpInfoAsync (Object burgerservicenummer, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'burgerservicenummer' is set
             if (burgerservicenummer == null)
@@ -383,7 +392,7 @@ namespace Org.OpenAPITools.Api
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -463,10 +472,11 @@ namespace Org.OpenAPITools.Api
         /// Raadplegen alle actieve volgindicaties Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VolgindicatieCollectie</returns>
-        public async System.Threading.Tasks.Task<VolgindicatieCollectie> GetVolgindicatiesAsync ()
+        public async System.Threading.Tasks.Task<VolgindicatieCollectie> GetVolgindicatiesAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<VolgindicatieCollectie> localVarResponse = await GetVolgindicatiesAsyncWithHttpInfo();
+             ApiResponse<VolgindicatieCollectie> localVarResponse = await GetVolgindicatiesWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -475,8 +485,9 @@ namespace Org.OpenAPITools.Api
         /// Raadplegen alle actieve volgindicaties Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VolgindicatieCollectie)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VolgindicatieCollectie>> GetVolgindicatiesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<VolgindicatieCollectie>> GetVolgindicatiesWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/volgindicaties";
@@ -506,7 +517,7 @@ namespace Org.OpenAPITools.Api
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -528,7 +539,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
         /// <returns>VolgindicatieRaadplegen</returns>
-        public VolgindicatieRaadplegen UpsertVolgindicatie (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie))
+        public VolgindicatieRaadplegen UpsertVolgindicatie (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie))
         {
              ApiResponse<VolgindicatieRaadplegen> localVarResponse = UpsertVolgindicatieWithHttpInfo(burgerservicenummer, volgindicatie);
              return localVarResponse.Data;
@@ -541,7 +552,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
         /// <returns>ApiResponse of VolgindicatieRaadplegen</returns>
-        public ApiResponse<VolgindicatieRaadplegen> UpsertVolgindicatieWithHttpInfo (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie))
+        public ApiResponse<VolgindicatieRaadplegen> UpsertVolgindicatieWithHttpInfo (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie))
         {
             // verify the required parameter 'burgerservicenummer' is set
             if (burgerservicenummer == null)
@@ -606,10 +617,11 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of VolgindicatieRaadplegen</returns>
-        public async System.Threading.Tasks.Task<VolgindicatieRaadplegen> UpsertVolgindicatieAsync (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie))
+        public async System.Threading.Tasks.Task<VolgindicatieRaadplegen> UpsertVolgindicatieAsync (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<VolgindicatieRaadplegen> localVarResponse = await UpsertVolgindicatieAsyncWithHttpInfo(burgerservicenummer, volgindicatie);
+             ApiResponse<VolgindicatieRaadplegen> localVarResponse = await UpsertVolgindicatieWithHttpInfoAsync(burgerservicenummer, volgindicatie, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -620,8 +632,9 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <param name="volgindicatie"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (VolgindicatieRaadplegen)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> UpsertVolgindicatieAsyncWithHttpInfo (AnyType burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie))
+        public async System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> UpsertVolgindicatieWithHttpInfoAsync (Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'burgerservicenummer' is set
             if (burgerservicenummer == null)
@@ -665,7 +678,7 @@ namespace Org.OpenAPITools.Api
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

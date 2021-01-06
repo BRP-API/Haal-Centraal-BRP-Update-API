@@ -1,5 +1,3 @@
-# coding: utf-8
-
 # flake8: noqa
 
 """
@@ -12,32 +10,18 @@
 """
 
 
-from __future__ import absolute_import
-
 __version__ = "1.0.0"
-
-# import apis into sdk package
-from openapi_client.api.beheren_volgindicaties_api import BeherenVolgindicatiesApi
-from openapi_client.api.raadplegen_gewijzigde_personen_api import RaadplegenGewijzigdePersonenApi
 
 # import ApiClient
 from openapi_client.api_client import ApiClient
+
+# import Configuration
 from openapi_client.configuration import Configuration
+
+# import exceptions
 from openapi_client.exceptions import OpenApiException
+from openapi_client.exceptions import ApiAttributeError
 from openapi_client.exceptions import ApiTypeError
 from openapi_client.exceptions import ApiValueError
 from openapi_client.exceptions import ApiKeyError
 from openapi_client.exceptions import ApiException
-# import models into sdk package
-from openapi_client.models.bad_request_foutbericht import BadRequestFoutbericht
-from openapi_client.models.bad_request_foutbericht_all_of import BadRequestFoutberichtAllOf
-from openapi_client.models.foutbericht import Foutbericht
-from openapi_client.models.gewijzigdepersonen_hal_collectie import GewijzigdepersonenHalCollectie
-from openapi_client.models.gewijzigdepersonen_hal_collection_links import GewijzigdepersonenHalCollectionLinks
-from openapi_client.models.hal_link import HalLink
-from openapi_client.models.invalid_params import InvalidParams
-from openapi_client.models.volgindicatie import Volgindicatie
-from openapi_client.models.volgindicatie_collectie import VolgindicatieCollectie
-from openapi_client.models.volgindicatie_raadplegen import VolgindicatieRaadplegen
-from openapi_client.models.volgindicatie_raadplegen_all_of import VolgindicatieRaadplegenAllOf
-

@@ -10,7 +10,7 @@ For more information, please visit [https://github.com/JohanBoer/Haal-Centraal-B
 
 ## Requirements.
 
-Python 2.7 and 3.4+
+Python >= 3.6
 
 ## Installation & Usage
 ### pip install
@@ -46,13 +46,16 @@ import openapi_client
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
-from __future__ import print_function
 
 import time
 import openapi_client
-from openapi_client.rest import ApiException
 from pprint import pprint
-
+from openapi_client.api import beheren_volgindicaties_api
+from openapi_client.model.bad_request_foutbericht import BadRequestFoutbericht
+from openapi_client.model.foutbericht import Foutbericht
+from openapi_client.model.volgindicatie import Volgindicatie
+from openapi_client.model.volgindicatie_collectie import VolgindicatieCollectie
+from openapi_client.model.volgindicatie_raadplegen import VolgindicatieRaadplegen
 # Defining the host is optional and defaults to https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api
 # See configuration.py for a list of all supported configuration parameters.
 configuration = openapi_client.Configuration(
@@ -64,16 +67,15 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.BeherenVolgindicatiesApi(api_client)
-    burgerservicenummer = 555555021 # object | Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+    api_instance = beheren_volgindicaties_api.BeherenVolgindicatiesApi(api_client)
+    burgerservicenummer = None # bool, date, datetime, dict, float, int, list, str, none_type | Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
 
     try:
         # Raadplegen specifieke volgindicatie
         api_response = api_instance.get_volgindicatie(burgerservicenummer)
         pprint(api_response)
-    except ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling BeherenVolgindicatiesApi->get_volgindicatie: %s\n" % e)
-    
 ```
 
 ## Documentation for API Endpoints
@@ -111,4 +113,23 @@ Class | Method | HTTP request | Description
 
 
 
+
+## Notes for Large OpenAPI documents
+If the OpenAPI document is large, imports in openapi_client.apis and openapi_client.models may fail with a
+RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
+
+Solution 1:
+Use specific imports for apis and models like:
+- `from openapi_client.api.default_api import DefaultApi`
+- `from openapi_client.model.pet import Pet`
+
+Solution 1:
+Before importing the package, adjust the maximum recursion limit as shown below:
+```
+import sys
+sys.setrecursionlimit(1500)
+import openapi_client
+from openapi_client.apis import *
+from openapi_client.models import *
+```
 
