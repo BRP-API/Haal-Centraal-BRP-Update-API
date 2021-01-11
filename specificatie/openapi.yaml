@@ -87,8 +87,8 @@ paths:
       operationId: UpsertVolgindicatie
       description: |
         Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd.
-Je kunt de einddatum van een volgindicatie verwijderen (leeg maken) door in de request body een leeg object { } te sturen.
-Je kunt een volgindicatie beëindigen door einddatum gelijk aan de datum van vandaag te sturen.
+        Je kunt de einddatum van een volgindicatie verwijderen (leeg maken) door in de request body een leeg object { } te sturen.
+        Je kunt een volgindicatie beëindigen door einddatum gelijk aan de datum van vandaag te sturen.
       summary: "Plaats, wijzig of beëindig een volgindicatie"
       parameters:
         - $ref: '#/components/parameters/burgerservicenummer'
