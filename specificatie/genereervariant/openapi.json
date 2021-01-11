@@ -20,8 +20,8 @@
     "/volgindicaties" : {
       "get" : {
         "tags" : [ "Beheren volgindicaties" ],
-        "summary" : "Raadplegen alle actieve volgindicaties",
-        "description" : "Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd.\n",
+        "summary" : "Raadpleeg actieve volgindicaties",
+        "description" : "Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met als einddatum vandaag of een einddatum in het verleden.\n",
         "operationId" : "GetVolgindicaties",
         "responses" : {
           "200" : {
@@ -178,8 +178,8 @@
     "/volgindicaties/{burgerservicenummer}" : {
       "get" : {
         "tags" : [ "Beheren volgindicaties" ],
-        "summary" : "Raadplegen specifieke volgindicatie",
-        "description" : "Opvragen van een volgindicatie van een specifieke persoon.\n",
+        "summary" : "Raadpleeg een volgindicatie op een persoon",
+        "description" : "Vraag een volgindicatie op van een specifieke persoon.\n",
         "operationId" : "GetVolgindicatie",
         "parameters" : [ {
           "name" : "burgerservicenummer",
@@ -400,8 +400,8 @@
       },
       "put" : {
         "tags" : [ "Beheren volgindicaties" ],
-        "summary" : "Toevoegen, wijzigen of beëindigen volgindicatie",
-        "description" : "Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.\n\nDe einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.\n\nEen volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren.\n",
+        "summary" : "Plaats, wijzig of beëindig een volgindicatie",
+        "description" : "Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd.\nJe kunt de einddatum van een volgindicatie verwijderen (leeg maken) door in de request body een leeg object { } te sturen.\nJe kunt een volgindicatie beëindigen door einddatum gelijk aan de datum van vandaag te sturen.\n",
         "operationId" : "UpsertVolgindicatie",
         "parameters" : [ {
           "name" : "burgerservicenummer",
@@ -651,8 +651,8 @@
     "/wijzigingen" : {
       "get" : {
         "tags" : [ "Raadplegen gewijzigde personen" ],
-        "summary" : "Raadplegen personen met gewijzigde gegevens",
-        "description" : "Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.\n",
+        "summary" : "Raadpleeg personen met gewijzigde gegevens",
+        "description" : "Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens.\n",
         "operationId" : "GetGewijzigdePersonen",
         "parameters" : [ {
           "name" : "vanaf",
