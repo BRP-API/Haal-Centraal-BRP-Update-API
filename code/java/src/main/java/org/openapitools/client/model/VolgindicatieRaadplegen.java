@@ -30,7 +30,7 @@ import org.openapitools.client.model.VolgindicatieRaadplegenAllOf;
 /**
  * VolgindicatieRaadplegen
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:32:33.412Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-11T10:01:27.106Z[Etc/UTC]")
 public class VolgindicatieRaadplegen {
   public static final String SERIALIZED_NAME_EINDDATUM = "einddatum";
   @SerializedName(SERIALIZED_NAME_EINDDATUM)
