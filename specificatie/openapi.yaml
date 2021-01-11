@@ -16,9 +16,9 @@ paths:
   /volgindicaties:
     get:
       operationId: GetVolgindicaties
-      summary: "Raadplegen alle actieve volgindicaties"
+      summary: "Raadpleeg actieve volgindicaties"
       description: |
-        Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd.
+        Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met als einddatum vandaag of een einddatum in het verleden.
       responses:
         '200':
           description: "OK"
@@ -49,8 +49,8 @@ paths:
     get:
       operationId: GetVolgindicatie
       description: |
-        Opvragen van een volgindicatie van een specifieke persoon.
-      summary: "Raadplegen specifieke volgindicatie"
+        Vraag een volgindicatie op van een specifieke persoon.
+      summary: "Raadpleeg een volgindicatie op een persoon"
       parameters:
         - $ref: '#/components/parameters/burgerservicenummer'
       responses:
@@ -86,12 +86,10 @@ paths:
     put:
       operationId: UpsertVolgindicatie
       description: |
-        Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.
-
-        De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.
-
-        Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren.
-      summary: "Toevoegen, wijzigen of beëindigen volgindicatie"
+        Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd.
+Je kunt de einddatum van een volgindicatie verwijderen (leeg maken) door in de request body een leeg object { } te sturen.
+Je kunt een volgindicatie beëindigen door einddatum gelijk aan de datum van vandaag te sturen.
+      summary: "Plaats, wijzig of beëindig een volgindicatie"
       parameters:
         - $ref: '#/components/parameters/burgerservicenummer'
       requestBody:
@@ -144,8 +142,8 @@ paths:
     get:
       operationId: GetGewijzigdePersonen
       description: |
-        Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.
-      summary: "Raadplegen personen met gewijzigde gegevens"
+        Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens.
+      summary: "Raadpleeg personen met gewijzigde gegevens"
       parameters:
         - in: query
           name: vanaf
