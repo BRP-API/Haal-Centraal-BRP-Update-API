@@ -78,7 +78,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getVolgindicatieCall(oas_any_type_not_mapped burgerservicenummer, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVolgindicatieCall(Object burgerservicenummer, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -90,6 +90,7 @@ public class BeherenVolgindicatiesApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
         final String[] localVarAccepts = {
             "application/json", "application/problem+json"
         };
@@ -109,7 +110,7 @@ public class BeherenVolgindicatiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVolgindicatieValidateBeforeCall(oas_any_type_not_mapped burgerservicenummer, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getVolgindicatieValidateBeforeCall(Object burgerservicenummer, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'burgerservicenummer' is set
         if (burgerservicenummer == null) {
@@ -142,7 +143,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public VolgindicatieRaadplegen getVolgindicatie(oas_any_type_not_mapped burgerservicenummer) throws ApiException {
+    public VolgindicatieRaadplegen getVolgindicatie(Object burgerservicenummer) throws ApiException {
         ApiResponse<VolgindicatieRaadplegen> localVarResp = getVolgindicatieWithHttpInfo(burgerservicenummer);
         return localVarResp.getData();
     }
@@ -167,7 +168,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<VolgindicatieRaadplegen> getVolgindicatieWithHttpInfo(oas_any_type_not_mapped burgerservicenummer) throws ApiException {
+    public ApiResponse<VolgindicatieRaadplegen> getVolgindicatieWithHttpInfo(Object burgerservicenummer) throws ApiException {
         okhttp3.Call localVarCall = getVolgindicatieValidateBeforeCall(burgerservicenummer, null);
         Type localVarReturnType = new TypeToken<VolgindicatieRaadplegen>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -194,7 +195,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getVolgindicatieAsync(oas_any_type_not_mapped burgerservicenummer, final ApiCallback<VolgindicatieRaadplegen> _callback) throws ApiException {
+    public okhttp3.Call getVolgindicatieAsync(Object burgerservicenummer, final ApiCallback<VolgindicatieRaadplegen> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getVolgindicatieValidateBeforeCall(burgerservicenummer, _callback);
         Type localVarReturnType = new TypeToken<VolgindicatieRaadplegen>(){}.getType();
@@ -229,6 +230,7 @@ public class BeherenVolgindicatiesApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
         final String[] localVarAccepts = {
             "application/json", "application/problem+json"
         };
@@ -348,7 +350,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call upsertVolgindicatieCall(oas_any_type_not_mapped burgerservicenummer, Volgindicatie volgindicatie, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call upsertVolgindicatieCall(Object burgerservicenummer, Volgindicatie volgindicatie, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = volgindicatie;
 
         // create path and map variables
@@ -360,6 +362,7 @@ public class BeherenVolgindicatiesApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
         final String[] localVarAccepts = {
             "application/json", "application/hal+json", "application/problem+json"
         };
@@ -379,7 +382,7 @@ public class BeherenVolgindicatiesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call upsertVolgindicatieValidateBeforeCall(oas_any_type_not_mapped burgerservicenummer, Volgindicatie volgindicatie, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call upsertVolgindicatieValidateBeforeCall(Object burgerservicenummer, Volgindicatie volgindicatie, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'burgerservicenummer' is set
         if (burgerservicenummer == null) {
@@ -414,7 +417,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public VolgindicatieRaadplegen upsertVolgindicatie(oas_any_type_not_mapped burgerservicenummer, Volgindicatie volgindicatie) throws ApiException {
+    public VolgindicatieRaadplegen upsertVolgindicatie(Object burgerservicenummer, Volgindicatie volgindicatie) throws ApiException {
         ApiResponse<VolgindicatieRaadplegen> localVarResp = upsertVolgindicatieWithHttpInfo(burgerservicenummer, volgindicatie);
         return localVarResp.getData();
     }
@@ -441,7 +444,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<VolgindicatieRaadplegen> upsertVolgindicatieWithHttpInfo(oas_any_type_not_mapped burgerservicenummer, Volgindicatie volgindicatie) throws ApiException {
+    public ApiResponse<VolgindicatieRaadplegen> upsertVolgindicatieWithHttpInfo(Object burgerservicenummer, Volgindicatie volgindicatie) throws ApiException {
         okhttp3.Call localVarCall = upsertVolgindicatieValidateBeforeCall(burgerservicenummer, volgindicatie, null);
         Type localVarReturnType = new TypeToken<VolgindicatieRaadplegen>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -470,7 +473,7 @@ public class BeherenVolgindicatiesApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call upsertVolgindicatieAsync(oas_any_type_not_mapped burgerservicenummer, Volgindicatie volgindicatie, final ApiCallback<VolgindicatieRaadplegen> _callback) throws ApiException {
+    public okhttp3.Call upsertVolgindicatieAsync(Object burgerservicenummer, Volgindicatie volgindicatie, final ApiCallback<VolgindicatieRaadplegen> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = upsertVolgindicatieValidateBeforeCall(burgerservicenummer, volgindicatie, _callback);
         Type localVarReturnType = new TypeToken<VolgindicatieRaadplegen>(){}.getType();

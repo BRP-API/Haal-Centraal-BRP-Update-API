@@ -80,7 +80,7 @@ namespace Example
 
             Configuration.Default.BasePath = "https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api";
             var apiInstance = new BeherenVolgindicatiesApi(Configuration.Default);
-            var burgerservicenummer = new AnyType(); // AnyType | Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+            var burgerservicenummer = new Object(); // Object | Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
 
             try
             {

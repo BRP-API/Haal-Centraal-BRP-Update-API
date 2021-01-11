@@ -2,7 +2,7 @@
 
 BRP Update API
 - API version: 1.0.0
-  - Build date: 2020-11-19T08:46:35.638Z[Etc/UTC]
+  - Build date: 2021-01-06T08:32:33.412Z[Etc/UTC]
 
 Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.
 
@@ -86,7 +86,7 @@ public class Example {
     defaultClient.setBasePath("https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api");
 
     BeherenVolgindicatiesApi apiInstance = new BeherenVolgindicatiesApi(defaultClient);
-    oas_any_type_not_mapped burgerservicenummer = 555555021; // oas_any_type_not_mapped | Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
+    Object burgerservicenummer = null; // Object | Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
     try {
       VolgindicatieRaadplegen result = apiInstance.getVolgindicatie(burgerservicenummer);
       System.out.println(result);

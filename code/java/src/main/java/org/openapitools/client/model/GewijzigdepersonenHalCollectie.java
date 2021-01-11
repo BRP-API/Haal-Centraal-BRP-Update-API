@@ -30,7 +30,7 @@ import org.openapitools.client.model.GewijzigdepersonenHalCollectionLinks;
 /**
  * GewijzigdepersonenHalCollectie
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-25T13:12:51.811Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:32:33.412Z[Etc/UTC]")
 public class GewijzigdepersonenHalCollectie {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -96,7 +96,7 @@ public class GewijzigdepersonenHalCollectie {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -128,7 +128,7 @@ public class GewijzigdepersonenHalCollectie {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

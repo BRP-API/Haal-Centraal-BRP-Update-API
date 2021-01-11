@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using Org.OpenAPITools.Client;
 using Org.OpenAPITools.Model;
@@ -55,8 +56,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GewijzigdepersonenHalCollectie</returns>
-        System.Threading.Tasks.Task<GewijzigdepersonenHalCollectie> GetGewijzigdePersonenAsync (DateTime? vanaf = default(DateTime?));
+        System.Threading.Tasks.Task<GewijzigdepersonenHalCollectie> GetGewijzigdePersonenAsync (DateTime? vanaf = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Raadplegen personen met gewijzigde gegevens
@@ -66,8 +68,9 @@ namespace Org.OpenAPITools.Api
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GewijzigdepersonenHalCollectie)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GewijzigdepersonenHalCollectie>> GetGewijzigdePersonenAsyncWithHttpInfo (DateTime? vanaf = default(DateTime?));
+        System.Threading.Tasks.Task<ApiResponse<GewijzigdepersonenHalCollectie>> GetGewijzigdePersonenWithHttpInfoAsync (DateTime? vanaf = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -248,10 +251,11 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of GewijzigdepersonenHalCollectie</returns>
-        public async System.Threading.Tasks.Task<GewijzigdepersonenHalCollectie> GetGewijzigdePersonenAsync (DateTime? vanaf = default(DateTime?))
+        public async System.Threading.Tasks.Task<GewijzigdepersonenHalCollectie> GetGewijzigdePersonenAsync (DateTime? vanaf = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<GewijzigdepersonenHalCollectie> localVarResponse = await GetGewijzigdePersonenAsyncWithHttpInfo(vanaf);
+             ApiResponse<GewijzigdepersonenHalCollectie> localVarResponse = await GetGewijzigdePersonenWithHttpInfoAsync(vanaf, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -261,8 +265,9 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (GewijzigdepersonenHalCollectie)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GewijzigdepersonenHalCollectie>> GetGewijzigdePersonenAsyncWithHttpInfo (DateTime? vanaf = default(DateTime?))
+        public async System.Threading.Tasks.Task<ApiResponse<GewijzigdepersonenHalCollectie>> GetGewijzigdePersonenWithHttpInfoAsync (DateTime? vanaf = default(DateTime?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/wijzigingen";
@@ -293,7 +298,7 @@ namespace Org.OpenAPITools.Api
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
