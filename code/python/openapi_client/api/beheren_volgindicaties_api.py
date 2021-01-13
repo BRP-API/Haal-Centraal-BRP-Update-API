@@ -45,9 +45,9 @@ class BeherenVolgindicatiesApi(object):
             burgerservicenummer,
             **kwargs
         ):
-            """Raadplegen specifieke volgindicatie  # noqa: E501
+            """Raadpleeg een volgindicatie op een persoon  # noqa: E501
 
-            Opvragen van een volgindicatie van een specifieke persoon.   # noqa: E501
+            Vraag een volgindicatie op van een specifieke persoon.   # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
@@ -170,9 +170,9 @@ class BeherenVolgindicatiesApi(object):
             self,
             **kwargs
         ):
-            """Raadplegen alle actieve volgindicaties  # noqa: E501
+            """Raadpleeg actieve volgindicaties  # noqa: E501
 
-            Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd.   # noqa: E501
+            Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden.   # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
@@ -277,9 +277,9 @@ class BeherenVolgindicatiesApi(object):
             burgerservicenummer,
             **kwargs
         ):
-            """Toevoegen, wijzigen of beëindigen volgindicatie  # noqa: E501
+            """Plaats, wijzig of beëindig een volgindicatie  # noqa: E501
 
-            Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren.   # noqa: E501
+            Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen.   # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 

@@ -42,9 +42,9 @@ class RaadplegenGewijzigdePersonenApi(object):
             self,
             **kwargs
         ):
-            """Raadplegen personen met gewijzigde gegevens  # noqa: E501
+            """Raadpleeg personen met gewijzigde gegevens  # noqa: E501
 
-            Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.   # noqa: E501
+            Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens.   # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 

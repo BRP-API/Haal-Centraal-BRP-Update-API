@@ -27,10 +27,10 @@ namespace Org.OpenAPITools.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens
+        /// Raadpleeg personen met gewijzigde gegevens
         /// </summary>
         /// <remarks>
-        /// Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
@@ -38,10 +38,10 @@ namespace Org.OpenAPITools.Api
         GewijzigdepersonenHalCollectie GetGewijzigdePersonen(DateTime? vanaf = default(DateTime?));
 
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens
+        /// Raadpleeg personen met gewijzigde gegevens
         /// </summary>
         /// <remarks>
-        /// Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
@@ -57,10 +57,10 @@ namespace Org.OpenAPITools.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens
+        /// Raadpleeg personen met gewijzigde gegevens
         /// </summary>
         /// <remarks>
-        /// Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
@@ -69,10 +69,10 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<GewijzigdepersonenHalCollectie> GetGewijzigdePersonenAsync(DateTime? vanaf = default(DateTime?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens
+        /// Raadpleeg personen met gewijzigde gegevens
         /// </summary>
         /// <remarks>
-        /// Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
@@ -200,7 +200,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Raadpleeg personen met gewijzigde gegevens Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
@@ -212,7 +212,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Raadpleeg personen met gewijzigde gegevens Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
@@ -255,7 +255,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Raadpleeg personen met gewijzigde gegevens Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>
@@ -268,7 +268,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen personen met gewijzigde gegevens Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+        /// Raadpleeg personen met gewijzigde gegevens Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vanaf">Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)</param>

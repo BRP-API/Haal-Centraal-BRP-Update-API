@@ -19,7 +19,7 @@ paths:
   /volgindicaties:
     get:
       description: |
-        Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd.
+        Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden.
       operationId: GetVolgindicaties
       responses:
         "200":
@@ -129,14 +129,14 @@ paths:
           headers:
             api-version:
               $ref: '#/components/headers/api_version'
-      summary: Raadplegen alle actieve volgindicaties
+      summary: Raadpleeg actieve volgindicaties
       tags:
       - Beheren volgindicaties
       x-accepts: application/json
   /volgindicaties/{burgerservicenummer}:
     get:
       description: |
-        Opvragen van een volgindicatie van een specifieke persoon.
+        Vraag een volgindicatie op van een specifieke persoon.
       operationId: GetVolgindicatie
       parameters:
       - description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
@@ -297,17 +297,15 @@ paths:
           headers:
             api-version:
               $ref: '#/components/headers/api_version'
-      summary: Raadplegen specifieke volgindicatie
+      summary: Raadpleeg een volgindicatie op een persoon
       tags:
       - Beheren volgindicaties
       x-accepts: application/json
     put:
       description: |
-        Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.
-
-        De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.
-
-        Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren.
+        Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd.
+        Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen.
+        Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen.
       operationId: UpsertVolgindicatie
       parameters:
       - description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
@@ -486,7 +484,7 @@ paths:
           headers:
             api-version:
               $ref: '#/components/headers/api_version'
-      summary: Toevoegen, wijzigen of beëindigen volgindicatie
+      summary: Plaats, wijzig of beëindig een volgindicatie
       tags:
       - Beheren volgindicaties
       x-contentType: application/json
@@ -494,7 +492,7 @@ paths:
   /wijzigingen:
     get:
       description: |
-        Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.
+        Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens.
       operationId: GetGewijzigdePersonen
       parameters:
       - description: Alleen personen waarbij gegevens zijn gewijzigd op of na deze
@@ -637,7 +635,7 @@ paths:
           headers:
             api-version:
               $ref: '#/components/headers/api_version'
-      summary: Raadplegen personen met gewijzigde gegevens
+      summary: Raadpleeg personen met gewijzigde gegevens
       tags:
       - Raadplegen gewijzigde personen
       x-accepts: application/hal+json,application/problem+json

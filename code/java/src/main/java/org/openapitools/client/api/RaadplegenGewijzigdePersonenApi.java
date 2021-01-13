@@ -120,8 +120,8 @@ public class RaadplegenGewijzigdePersonenApi {
     }
 
     /**
-     * Raadplegen personen met gewijzigde gegevens
-     * Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+     * Raadpleeg personen met gewijzigde gegevens
+     * Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
      * @param vanaf Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)
      * @return GewijzigdepersonenHalCollectie
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -144,8 +144,8 @@ public class RaadplegenGewijzigdePersonenApi {
     }
 
     /**
-     * Raadplegen personen met gewijzigde gegevens
-     * Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+     * Raadpleeg personen met gewijzigde gegevens
+     * Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
      * @param vanaf Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)
      * @return ApiResponse&lt;GewijzigdepersonenHalCollectie&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -169,8 +169,8 @@ public class RaadplegenGewijzigdePersonenApi {
     }
 
     /**
-     * Raadplegen personen met gewijzigde gegevens (asynchronously)
-     * Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+     * Raadpleeg personen met gewijzigde gegevens (asynchronously)
+     * Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
      * @param vanaf Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

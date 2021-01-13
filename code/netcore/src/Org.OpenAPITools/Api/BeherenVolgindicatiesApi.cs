@@ -27,10 +27,10 @@ namespace Org.OpenAPITools.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Raadplegen specifieke volgindicatie
+        /// Raadpleeg een volgindicatie op een persoon
         /// </summary>
         /// <remarks>
-        /// Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Vraag een volgindicatie op van een specifieke persoon. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -38,39 +38,39 @@ namespace Org.OpenAPITools.Api
         VolgindicatieRaadplegen GetVolgindicatie(Object burgerservicenummer);
 
         /// <summary>
-        /// Raadplegen specifieke volgindicatie
+        /// Raadpleeg een volgindicatie op een persoon
         /// </summary>
         /// <remarks>
-        /// Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Vraag een volgindicatie op van een specifieke persoon. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
         /// <returns>ApiResponse of VolgindicatieRaadplegen</returns>
         ApiResponse<VolgindicatieRaadplegen> GetVolgindicatieWithHttpInfo(Object burgerservicenummer);
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties
+        /// Raadpleeg actieve volgindicaties
         /// </summary>
         /// <remarks>
-        /// Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VolgindicatieCollectie</returns>
         VolgindicatieCollectie GetVolgindicaties();
 
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties
+        /// Raadpleeg actieve volgindicaties
         /// </summary>
         /// <remarks>
-        /// Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VolgindicatieCollectie</returns>
         ApiResponse<VolgindicatieCollectie> GetVolgindicatiesWithHttpInfo();
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie
+        /// Plaats, wijzig of beëindig een volgindicatie
         /// </summary>
         /// <remarks>
-        /// Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -79,10 +79,10 @@ namespace Org.OpenAPITools.Api
         VolgindicatieRaadplegen UpsertVolgindicatie(Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie));
 
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie
+        /// Plaats, wijzig of beëindig een volgindicatie
         /// </summary>
         /// <remarks>
-        /// Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -99,10 +99,10 @@ namespace Org.OpenAPITools.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Raadplegen specifieke volgindicatie
+        /// Raadpleeg een volgindicatie op een persoon
         /// </summary>
         /// <remarks>
-        /// Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Vraag een volgindicatie op van een specifieke persoon. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -111,10 +111,10 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<VolgindicatieRaadplegen> GetVolgindicatieAsync(Object burgerservicenummer, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Raadplegen specifieke volgindicatie
+        /// Raadpleeg een volgindicatie op een persoon
         /// </summary>
         /// <remarks>
-        /// Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Vraag een volgindicatie op van een specifieke persoon. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -122,10 +122,10 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of ApiResponse (VolgindicatieRaadplegen)</returns>
         System.Threading.Tasks.Task<ApiResponse<VolgindicatieRaadplegen>> GetVolgindicatieWithHttpInfoAsync(Object burgerservicenummer, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties
+        /// Raadpleeg actieve volgindicaties
         /// </summary>
         /// <remarks>
-        /// Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -133,20 +133,20 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<VolgindicatieCollectie> GetVolgindicatiesAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties
+        /// Raadpleeg actieve volgindicaties
         /// </summary>
         /// <remarks>
-        /// Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (VolgindicatieCollectie)</returns>
         System.Threading.Tasks.Task<ApiResponse<VolgindicatieCollectie>> GetVolgindicatiesWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie
+        /// Plaats, wijzig of beëindig een volgindicatie
         /// </summary>
         /// <remarks>
-        /// Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -156,10 +156,10 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task<VolgindicatieRaadplegen> UpsertVolgindicatieAsync(Object burgerservicenummer, Volgindicatie volgindicatie = default(Volgindicatie), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie
+        /// Plaats, wijzig of beëindig een volgindicatie
         /// </summary>
         /// <remarks>
-        /// Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -288,7 +288,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen specifieke volgindicatie Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Raadpleeg een volgindicatie op een persoon Vraag een volgindicatie op van een specifieke persoon. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -300,7 +300,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen specifieke volgindicatie Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Raadpleeg een volgindicatie op een persoon Vraag een volgindicatie op van een specifieke persoon. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -344,7 +344,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen specifieke volgindicatie Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Raadpleeg een volgindicatie op een persoon Vraag een volgindicatie op van een specifieke persoon. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -357,7 +357,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen specifieke volgindicatie Opvragen van een volgindicatie van een specifieke persoon. 
+        /// Raadpleeg een volgindicatie op een persoon Vraag een volgindicatie op van een specifieke persoon. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -405,7 +405,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Raadpleeg actieve volgindicaties Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VolgindicatieCollectie</returns>
@@ -416,7 +416,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Raadpleeg actieve volgindicaties Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VolgindicatieCollectie</returns>
@@ -454,7 +454,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Raadpleeg actieve volgindicaties Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -466,7 +466,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Raadplegen alle actieve volgindicaties Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+        /// Raadpleeg actieve volgindicaties Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -508,7 +508,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -521,7 +521,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -569,7 +569,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>
@@ -583,7 +583,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Toevoegen, wijzigen of beëindigen volgindicatie Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+        /// Plaats, wijzig of beëindig een volgindicatie Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="burgerservicenummer">Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.</param>

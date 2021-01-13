@@ -71,7 +71,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     burgerservicenummer = None # bool, date, datetime, dict, float, int, list, str, none_type | Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
 
     try:
-        # Raadplegen specifieke volgindicatie
+        # Raadpleeg een volgindicatie op een persoon
         api_response = api_instance.get_volgindicatie(burgerservicenummer)
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -84,10 +84,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/VNGRealisatie/api/br
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BeherenVolgindicatiesApi* | [**get_volgindicatie**](docs/BeherenVolgindicatiesApi.md#get_volgindicatie) | **GET** /volgindicaties/{burgerservicenummer} | Raadplegen specifieke volgindicatie
-*BeherenVolgindicatiesApi* | [**get_volgindicaties**](docs/BeherenVolgindicatiesApi.md#get_volgindicaties) | **GET** /volgindicaties | Raadplegen alle actieve volgindicaties
-*BeherenVolgindicatiesApi* | [**upsert_volgindicatie**](docs/BeherenVolgindicatiesApi.md#upsert_volgindicatie) | **PUT** /volgindicaties/{burgerservicenummer} | Toevoegen, wijzigen of beëindigen volgindicatie
-*RaadplegenGewijzigdePersonenApi* | [**get_gewijzigde_personen**](docs/RaadplegenGewijzigdePersonenApi.md#get_gewijzigde_personen) | **GET** /wijzigingen | Raadplegen personen met gewijzigde gegevens
+*BeherenVolgindicatiesApi* | [**get_volgindicatie**](docs/BeherenVolgindicatiesApi.md#get_volgindicatie) | **GET** /volgindicaties/{burgerservicenummer} | Raadpleeg een volgindicatie op een persoon
+*BeherenVolgindicatiesApi* | [**get_volgindicaties**](docs/BeherenVolgindicatiesApi.md#get_volgindicaties) | **GET** /volgindicaties | Raadpleeg actieve volgindicaties
+*BeherenVolgindicatiesApi* | [**upsert_volgindicatie**](docs/BeherenVolgindicatiesApi.md#upsert_volgindicatie) | **PUT** /volgindicaties/{burgerservicenummer} | Plaats, wijzig of beëindig een volgindicatie
+*RaadplegenGewijzigdePersonenApi* | [**get_gewijzigde_personen**](docs/RaadplegenGewijzigdePersonenApi.md#get_gewijzigde_personen) | **GET** /wijzigingen | Raadpleeg personen met gewijzigde gegevens
 
 
 ## Documentation For Models
