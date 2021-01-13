@@ -21,7 +21,7 @@
       "get" : {
         "tags" : [ "Beheren volgindicaties" ],
         "summary" : "Raadpleeg actieve volgindicaties",
-        "description" : "Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met als einddatum vandaag of een einddatum in het verleden.\n",
+        "description" : "Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden.\n",
         "operationId" : "GetVolgindicaties",
         "responses" : {
           "200" : {
@@ -401,7 +401,7 @@
       "put" : {
         "tags" : [ "Beheren volgindicaties" ],
         "summary" : "Plaats, wijzig of beëindig een volgindicatie",
-        "description" : "Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd.\nJe kunt de einddatum van een volgindicatie verwijderen (leeg maken) door in de request body een leeg object { } te sturen.\nJe kunt een volgindicatie beëindigen door einddatum gelijk aan de datum van vandaag te sturen.\n",
+        "description" : "Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd.\nVerwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen.\nBeëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen.\n",
         "operationId" : "UpsertVolgindicatie",
         "parameters" : [ {
           "name" : "burgerservicenummer",

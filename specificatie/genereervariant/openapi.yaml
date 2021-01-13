@@ -22,7 +22,7 @@ paths:
       - Beheren volgindicaties
       summary: Raadpleeg actieve volgindicaties
       description: |
-        Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met als einddatum vandaag of een einddatum in het verleden.
+        Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden.
       operationId: GetVolgindicaties
       responses:
         "200":
@@ -305,8 +305,8 @@ paths:
       summary: Plaats, wijzig of beëindig een volgindicatie
       description: |
         Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd.
-        Je kunt de einddatum van een volgindicatie verwijderen (leeg maken) door in de request body een leeg object { } te sturen.
-        Je kunt een volgindicatie beëindigen door einddatum gelijk aan de datum van vandaag te sturen.
+        Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen.
+        Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen.
       operationId: UpsertVolgindicatie
       parameters:
       - name: burgerservicenummer
