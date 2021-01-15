@@ -35,8 +35,8 @@ src/main/java/org/openapitools/client/auth/HttpBearerAuth.java
 src/main/java/org/openapitools/client/model/BadRequestFoutbericht.java
 src/main/java/org/openapitools/client/model/BadRequestFoutberichtAllOf.java
 src/main/java/org/openapitools/client/model/Foutbericht.java
-src/main/java/org/openapitools/client/model/GewijzigdepersonenHalCollectie.java
-src/main/java/org/openapitools/client/model/GewijzigdepersonenHalCollectionLinks.java
+src/main/java/org/openapitools/client/model/GewijzigdePersonenHalCollectie.java
+src/main/java/org/openapitools/client/model/GewijzigdePersonenHalCollectionLinks.java
 src/main/java/org/openapitools/client/model/HalLink.java
 src/main/java/org/openapitools/client/model/InvalidParams.java
 src/main/java/org/openapitools/client/model/Volgindicatie.java

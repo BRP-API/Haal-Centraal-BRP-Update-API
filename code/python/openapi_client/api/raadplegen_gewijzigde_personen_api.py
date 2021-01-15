@@ -23,7 +23,7 @@ from openapi_client.model_utils import (  # noqa: F401
 )
 from openapi_client.model.bad_request_foutbericht import BadRequestFoutbericht
 from openapi_client.model.foutbericht import Foutbericht
-from openapi_client.model.gewijzigdepersonen_hal_collectie import GewijzigdepersonenHalCollectie
+from openapi_client.model.gewijzigde_personen_hal_collectie import GewijzigdePersonenHalCollectie
 
 
 class RaadplegenGewijzigdePersonenApi(object):
@@ -75,7 +75,7 @@ class RaadplegenGewijzigdePersonenApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                GewijzigdepersonenHalCollectie
+                GewijzigdePersonenHalCollectie
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -102,7 +102,7 @@ class RaadplegenGewijzigdePersonenApi(object):
 
         self.get_gewijzigde_personen = Endpoint(
             settings={
-                'response_type': (GewijzigdepersonenHalCollectie,),
+                'response_type': (GewijzigdePersonenHalCollectie,),
                 'auth': [],
                 'endpoint_path': '/wijzigingen',
                 'operation_id': 'get_gewijzigde_personen',

@@ -510,7 +510,7 @@ paths:
           content:
             application/hal+json:
               schema:
-                $ref: '#/components/schemas/GewijzigdepersonenHalCollectie'
+                $ref: '#/components/schemas/GewijzigdePersonenHalCollectie'
           description: OK
           headers:
             api-version:
@@ -700,10 +700,10 @@ components:
       allOf:
       - $ref: '#/components/schemas/Volgindicatie'
       - $ref: '#/components/schemas/VolgindicatieRaadplegen_allOf'
-    GewijzigdepersonenHalCollectie:
+    GewijzigdePersonenHalCollectie:
       properties:
         _links:
-          $ref: '#/components/schemas/GewijzigdepersonenHalCollectionLinks'
+          $ref: '#/components/schemas/GewijzigdePersonenHalCollectionLinks'
         burgerservicenummers:
           items:
             description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
@@ -712,7 +712,7 @@ components:
             type: string
           type: array
       type: object
-    GewijzigdepersonenHalCollectionLinks:
+    GewijzigdePersonenHalCollectionLinks:
       properties:
         self:
           $ref: '#/components/schemas/HalLink'

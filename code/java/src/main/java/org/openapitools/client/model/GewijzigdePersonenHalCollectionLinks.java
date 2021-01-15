@@ -23,37 +23,65 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.client.model.HalLink;
 
 /**
- * VolgindicatieRaadplegenAllOf
+ * GewijzigdePersonenHalCollectionLinks
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T12:54:34.220Z[Etc/UTC]")
-public class VolgindicatieRaadplegenAllOf {
-  public static final String SERIALIZED_NAME_BURGERSERVICENUMMER = "burgerservicenummer";
-  @SerializedName(SERIALIZED_NAME_BURGERSERVICENUMMER)
-  private String burgerservicenummer;
+public class GewijzigdePersonenHalCollectionLinks {
+  public static final String SERIALIZED_NAME_SELF = "self";
+  @SerializedName(SERIALIZED_NAME_SELF)
+  private HalLink self;
+
+  public static final String SERIALIZED_NAME_INGESCHREVEN_PERSOON = "ingeschrevenPersoon";
+  @SerializedName(SERIALIZED_NAME_INGESCHREVEN_PERSOON)
+  private HalLink ingeschrevenPersoon;
 
 
-  public VolgindicatieRaadplegenAllOf burgerservicenummer(String burgerservicenummer) {
+  public GewijzigdePersonenHalCollectionLinks self(HalLink self) {
     
-    this.burgerservicenummer = burgerservicenummer;
+    this.self = self;
     return this;
   }
 
    /**
-   * Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
-   * @return burgerservicenummer
+   * Get self
+   * @return self
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.")
+  @ApiModelProperty(value = "")
 
-  public String getBurgerservicenummer() {
-    return burgerservicenummer;
+  public HalLink getSelf() {
+    return self;
   }
 
 
-  public void setBurgerservicenummer(String burgerservicenummer) {
-    this.burgerservicenummer = burgerservicenummer;
+  public void setSelf(HalLink self) {
+    this.self = self;
+  }
+
+
+  public GewijzigdePersonenHalCollectionLinks ingeschrevenPersoon(HalLink ingeschrevenPersoon) {
+    
+    this.ingeschrevenPersoon = ingeschrevenPersoon;
+    return this;
+  }
+
+   /**
+   * Get ingeschrevenPersoon
+   * @return ingeschrevenPersoon
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public HalLink getIngeschrevenPersoon() {
+    return ingeschrevenPersoon;
+  }
+
+
+  public void setIngeschrevenPersoon(HalLink ingeschrevenPersoon) {
+    this.ingeschrevenPersoon = ingeschrevenPersoon;
   }
 
 
@@ -65,21 +93,23 @@ public class VolgindicatieRaadplegenAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VolgindicatieRaadplegenAllOf volgindicatieRaadplegenAllOf = (VolgindicatieRaadplegenAllOf) o;
-    return Objects.equals(this.burgerservicenummer, volgindicatieRaadplegenAllOf.burgerservicenummer);
+    GewijzigdePersonenHalCollectionLinks gewijzigdePersonenHalCollectionLinks = (GewijzigdePersonenHalCollectionLinks) o;
+    return Objects.equals(this.self, gewijzigdePersonenHalCollectionLinks.self) &&
+        Objects.equals(this.ingeschrevenPersoon, gewijzigdePersonenHalCollectionLinks.ingeschrevenPersoon);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(burgerservicenummer);
+    return Objects.hash(self, ingeschrevenPersoon);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class VolgindicatieRaadplegenAllOf {\n");
-    sb.append("    burgerservicenummer: ").append(toIndentedString(burgerservicenummer)).append("\n");
+    sb.append("class GewijzigdePersonenHalCollectionLinks {\n");
+    sb.append("    self: ").append(toIndentedString(self)).append("\n");
+    sb.append("    ingeschrevenPersoon: ").append(toIndentedString(ingeschrevenPersoon)).append("\n");
     sb.append("}");
     return sb.toString();
   }

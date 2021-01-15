@@ -2,7 +2,7 @@
 
 BRP Update API
 - API version: 1.0.0
-  - Build date: 2021-01-13T13:13:10.541Z[Etc/UTC]
+  - Build date: 2021-01-15T12:54:34.220Z[Etc/UTC]
 
 Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.
 
@@ -119,8 +119,8 @@ Class | Method | HTTP request | Description
  - [BadRequestFoutbericht](docs/BadRequestFoutbericht.md)
  - [BadRequestFoutberichtAllOf](docs/BadRequestFoutberichtAllOf.md)
  - [Foutbericht](docs/Foutbericht.md)
- - [GewijzigdepersonenHalCollectie](docs/GewijzigdepersonenHalCollectie.md)
- - [GewijzigdepersonenHalCollectionLinks](docs/GewijzigdepersonenHalCollectionLinks.md)
+ - [GewijzigdePersonenHalCollectie](docs/GewijzigdePersonenHalCollectie.md)
+ - [GewijzigdePersonenHalCollectionLinks](docs/GewijzigdePersonenHalCollectionLinks.md)
  - [HalLink](docs/HalLink.md)
  - [InvalidParams](docs/InvalidParams.md)
  - [Volgindicatie](docs/Volgindicatie.md)
