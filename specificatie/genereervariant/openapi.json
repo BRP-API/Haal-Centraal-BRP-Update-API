@@ -680,7 +680,7 @@
             "content" : {
               "application/hal+json" : {
                 "schema" : {
-                  "$ref" : "#/components/schemas/GewijzigdepersonenHalCollectie"
+                  "$ref" : "#/components/schemas/GewijzigdePersonenHalCollectie"
                 }
               }
             }
@@ -883,11 +883,11 @@
           }
         } ]
       },
-      "GewijzigdepersonenHalCollectie" : {
+      "GewijzigdePersonenHalCollectie" : {
         "type" : "object",
         "properties" : {
           "_links" : {
-            "$ref" : "#/components/schemas/GewijzigdepersonenHalCollectionLinks"
+            "$ref" : "#/components/schemas/GewijzigdePersonenHalCollectionLinks"
           },
           "burgerservicenummers" : {
             "type" : "array",
@@ -899,7 +899,7 @@
           }
         }
       },
-      "GewijzigdepersonenHalCollectionLinks" : {
+      "GewijzigdePersonenHalCollectionLinks" : {
         "type" : "object",
         "properties" : {
           "self" : {

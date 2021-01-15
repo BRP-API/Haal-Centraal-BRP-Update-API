@@ -515,7 +515,7 @@ paths:
           content:
             application/hal+json:
               schema:
-                $ref: '#/components/schemas/GewijzigdepersonenHalCollectie'
+                $ref: '#/components/schemas/GewijzigdePersonenHalCollectie'
         "400":
           description: Bad Request
           headers:
@@ -658,11 +658,11 @@ components:
             type: string
             description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
               als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
-    GewijzigdepersonenHalCollectie:
+    GewijzigdePersonenHalCollectie:
       type: object
       properties:
         _links:
-          $ref: '#/components/schemas/GewijzigdepersonenHalCollectionLinks'
+          $ref: '#/components/schemas/GewijzigdePersonenHalCollectionLinks'
         burgerservicenummers:
           type: array
           items:
@@ -670,7 +670,7 @@ components:
             description: Identificerend gegeven van een ingeschreven natuurlijk persoon,
               als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer.
             example: "555555021"
-    GewijzigdepersonenHalCollectionLinks:
+    GewijzigdePersonenHalCollectionLinks:
       type: object
       properties:
         self:
