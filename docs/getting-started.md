@@ -12,23 +12,23 @@ Wil je de API gebruiken? Dit kun je doen:
 3. Probeer en test de API
 
 ## Functionaliteit en specificaties
-Met deze API kun je beheren welke personen je wilt volgen. Vervolgens kan je opvragen bij welke personen die je volgt er gegevens zijn gewijzigd vanaf een bepaalde datum.
+Met deze API kun je beheren welke personen je wilt volgen. Vervolgens kun je opvragen van welke personen die je volgt er gegevens zijn gewijzigd vanaf een bepaalde datum.
 
 Je kunt een visuele representatie van de specificatie bekijken met [Swagger UI]({{ site.baseurl }}/swagger-ui) of [Redoc]({{ site.baseurl }}/redoc).
 
 Je kunt de functionele documentatie lezen in [features](./features).
 
 ### Beheren welke personen worden gevolgd
-* Je kan het volgen van een persoon aanzetten met of zonder einddatum
-* Je kan het volgen van een persoon stoppen door een einddatum op het volgen door te geven
-* Je kan een einddatum voor volgen wijzigen door een nieuwe einddatum door te geven
-* Wanneer je eerder een persoon hebt gevolgd, dat nu is gestopt, kan je de persoon weer volgen door de einddatum te verwijderen of een einddatum in de toekomst door te geven
-* Je kan opvragen welke personen je volgt
+* Je kunt het volgen van een persoon aanzetten met of zonder einddatum
+* Je kunt het volgen van een persoon stoppen door een einddatum voor het volgen door te geven
+* Je kunt een einddatum voor volgen wijzigen door een nieuwe einddatum door te geven
+* Wanneer je eerder een persoon hebt gevolgd, kun je de persoon weer volgen door de einddatum te verwijderen of een einddatum in de toekomst door te geven
+* Je kunt opvragen welke personen je volgt
 
 ### Opvragen wijzigingen op personen
 * Vul de datum "vanaf" in om alle wijzigingen vanaf die datum te ontvangen
-* In het antwoord zitten de burgerservicecnummer van personen waarbij er iets is gewijzigd aan de gegevens op of na die datum
-* Gebruik het template in _links.ingeschrevenPersoon.href in combinatie met een burgerservicenummer of de actuele gegevens van de persoon op te vragen
+* In het antwoord zitten de burgerservicecnummers van personen waarbij er iets is gewijzigd aan de gegevens op of na die datum
+* Gebruik het template in _links.ingeschrevenPersoon.href in combinatie met een burgerservicenummer om de actuele gegevens van de persoon op te vragen
 
 ## Implementeer de API
 

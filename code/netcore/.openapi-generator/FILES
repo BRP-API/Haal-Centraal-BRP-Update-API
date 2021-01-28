@@ -25,8 +25,8 @@ src/Org.OpenAPITools/Model/AbstractOpenAPISchema.cs
 src/Org.OpenAPITools/Model/BadRequestFoutbericht.cs
 src/Org.OpenAPITools/Model/BadRequestFoutberichtAllOf.cs
 src/Org.OpenAPITools/Model/Foutbericht.cs
-src/Org.OpenAPITools/Model/GewijzigdepersonenHalCollectie.cs
-src/Org.OpenAPITools/Model/GewijzigdepersonenHalCollectionLinks.cs
+src/Org.OpenAPITools/Model/GewijzigdePersonenHalCollectie.cs
+src/Org.OpenAPITools/Model/GewijzigdePersonenHalCollectionLinks.cs
 src/Org.OpenAPITools/Model/HalLink.cs
 src/Org.OpenAPITools/Model/InvalidParams.cs
 src/Org.OpenAPITools/Model/Volgindicatie.cs

@@ -2,7 +2,7 @@
 
 BRP Update API
 - API version: 1.0.0
-  - Build date: 2021-01-06T08:32:33.412Z[Etc/UTC]
+  - Build date: 2021-01-15T12:54:34.220Z[Etc/UTC]
 
 Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.
 
@@ -108,10 +108,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/VNGRealisatie/api/br
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BeherenVolgindicatiesApi* | [**getVolgindicatie**](docs/BeherenVolgindicatiesApi.md#getVolgindicatie) | **GET** /volgindicaties/{burgerservicenummer} | Raadplegen specifieke volgindicatie
-*BeherenVolgindicatiesApi* | [**getVolgindicaties**](docs/BeherenVolgindicatiesApi.md#getVolgindicaties) | **GET** /volgindicaties | Raadplegen alle actieve volgindicaties
-*BeherenVolgindicatiesApi* | [**upsertVolgindicatie**](docs/BeherenVolgindicatiesApi.md#upsertVolgindicatie) | **PUT** /volgindicaties/{burgerservicenummer} | Toevoegen, wijzigen of beëindigen volgindicatie
-*RaadplegenGewijzigdePersonenApi* | [**getGewijzigdePersonen**](docs/RaadplegenGewijzigdePersonenApi.md#getGewijzigdePersonen) | **GET** /wijzigingen | Raadplegen personen met gewijzigde gegevens
+*BeherenVolgindicatiesApi* | [**getVolgindicatie**](docs/BeherenVolgindicatiesApi.md#getVolgindicatie) | **GET** /volgindicaties/{burgerservicenummer} | Raadpleeg een volgindicatie op een persoon
+*BeherenVolgindicatiesApi* | [**getVolgindicaties**](docs/BeherenVolgindicatiesApi.md#getVolgindicaties) | **GET** /volgindicaties | Raadpleeg actieve volgindicaties
+*BeherenVolgindicatiesApi* | [**upsertVolgindicatie**](docs/BeherenVolgindicatiesApi.md#upsertVolgindicatie) | **PUT** /volgindicaties/{burgerservicenummer} | Plaats, wijzig of beëindig een volgindicatie
+*RaadplegenGewijzigdePersonenApi* | [**getGewijzigdePersonen**](docs/RaadplegenGewijzigdePersonenApi.md#getGewijzigdePersonen) | **GET** /wijzigingen | Raadpleeg personen met gewijzigde gegevens
 
 
 ## Documentation for Models
@@ -119,8 +119,8 @@ Class | Method | HTTP request | Description
  - [BadRequestFoutbericht](docs/BadRequestFoutbericht.md)
  - [BadRequestFoutberichtAllOf](docs/BadRequestFoutberichtAllOf.md)
  - [Foutbericht](docs/Foutbericht.md)
- - [GewijzigdepersonenHalCollectie](docs/GewijzigdepersonenHalCollectie.md)
- - [GewijzigdepersonenHalCollectionLinks](docs/GewijzigdepersonenHalCollectionLinks.md)
+ - [GewijzigdePersonenHalCollectie](docs/GewijzigdePersonenHalCollectie.md)
+ - [GewijzigdePersonenHalCollectionLinks](docs/GewijzigdePersonenHalCollectionLinks.md)
  - [HalLink](docs/HalLink.md)
  - [InvalidParams](docs/InvalidParams.md)
  - [Volgindicatie](docs/Volgindicatie.md)

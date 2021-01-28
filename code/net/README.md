@@ -84,7 +84,7 @@ namespace Example
 
             try
             {
-                // Raadplegen specifieke volgindicatie
+                // Raadpleeg een volgindicatie op een persoon
                 VolgindicatieRaadplegen result = apiInstance.GetVolgindicatie(burgerservicenummer);
                 Debug.WriteLine(result);
             }
@@ -106,10 +106,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/VNGRealisatie/api/br
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BeherenVolgindicatiesApi* | [**GetVolgindicatie**](docs/BeherenVolgindicatiesApi.md#getvolgindicatie) | **GET** /volgindicaties/{burgerservicenummer} | Raadplegen specifieke volgindicatie
-*BeherenVolgindicatiesApi* | [**GetVolgindicaties**](docs/BeherenVolgindicatiesApi.md#getvolgindicaties) | **GET** /volgindicaties | Raadplegen alle actieve volgindicaties
-*BeherenVolgindicatiesApi* | [**UpsertVolgindicatie**](docs/BeherenVolgindicatiesApi.md#upsertvolgindicatie) | **PUT** /volgindicaties/{burgerservicenummer} | Toevoegen, wijzigen of beëindigen volgindicatie
-*RaadplegenGewijzigdePersonenApi* | [**GetGewijzigdePersonen**](docs/RaadplegenGewijzigdePersonenApi.md#getgewijzigdepersonen) | **GET** /wijzigingen | Raadplegen personen met gewijzigde gegevens
+*BeherenVolgindicatiesApi* | [**GetVolgindicatie**](docs/BeherenVolgindicatiesApi.md#getvolgindicatie) | **GET** /volgindicaties/{burgerservicenummer} | Raadpleeg een volgindicatie op een persoon
+*BeherenVolgindicatiesApi* | [**GetVolgindicaties**](docs/BeherenVolgindicatiesApi.md#getvolgindicaties) | **GET** /volgindicaties | Raadpleeg actieve volgindicaties
+*BeherenVolgindicatiesApi* | [**UpsertVolgindicatie**](docs/BeherenVolgindicatiesApi.md#upsertvolgindicatie) | **PUT** /volgindicaties/{burgerservicenummer} | Plaats, wijzig of beëindig een volgindicatie
+*RaadplegenGewijzigdePersonenApi* | [**GetGewijzigdePersonen**](docs/RaadplegenGewijzigdePersonenApi.md#getgewijzigdepersonen) | **GET** /wijzigingen | Raadpleeg personen met gewijzigde gegevens
 
 
 ## Documentation for Models
@@ -117,8 +117,8 @@ Class | Method | HTTP request | Description
  - [Model.BadRequestFoutbericht](docs/BadRequestFoutbericht.md)
  - [Model.BadRequestFoutberichtAllOf](docs/BadRequestFoutberichtAllOf.md)
  - [Model.Foutbericht](docs/Foutbericht.md)
- - [Model.GewijzigdepersonenHalCollectie](docs/GewijzigdepersonenHalCollectie.md)
- - [Model.GewijzigdepersonenHalCollectionLinks](docs/GewijzigdepersonenHalCollectionLinks.md)
+ - [Model.GewijzigdePersonenHalCollectie](docs/GewijzigdePersonenHalCollectie.md)
+ - [Model.GewijzigdePersonenHalCollectionLinks](docs/GewijzigdePersonenHalCollectionLinks.md)
  - [Model.HalLink](docs/HalLink.md)
  - [Model.InvalidParams](docs/InvalidParams.md)
  - [Model.Volgindicatie](docs/Volgindicatie.md)

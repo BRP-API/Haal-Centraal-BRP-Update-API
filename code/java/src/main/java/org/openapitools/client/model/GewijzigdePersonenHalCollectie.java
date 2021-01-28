@@ -25,23 +25,23 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.client.model.GewijzigdepersonenHalCollectionLinks;
+import org.openapitools.client.model.GewijzigdePersonenHalCollectionLinks;
 
 /**
- * GewijzigdepersonenHalCollectie
+ * GewijzigdePersonenHalCollectie
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-13T13:13:10.541Z[Etc/UTC]")
-public class GewijzigdepersonenHalCollectie {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T12:54:34.220Z[Etc/UTC]")
+public class GewijzigdePersonenHalCollectie {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
-  private GewijzigdepersonenHalCollectionLinks links;
+  private GewijzigdePersonenHalCollectionLinks links;
 
   public static final String SERIALIZED_NAME_BURGERSERVICENUMMERS = "burgerservicenummers";
   @SerializedName(SERIALIZED_NAME_BURGERSERVICENUMMERS)
   private List<String> burgerservicenummers = null;
 
 
-  public GewijzigdepersonenHalCollectie links(GewijzigdepersonenHalCollectionLinks links) {
+  public GewijzigdePersonenHalCollectie links(GewijzigdePersonenHalCollectionLinks links) {
     
     this.links = links;
     return this;
@@ -54,23 +54,23 @@ public class GewijzigdepersonenHalCollectie {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public GewijzigdepersonenHalCollectionLinks getLinks() {
+  public GewijzigdePersonenHalCollectionLinks getLinks() {
     return links;
   }
 
 
-  public void setLinks(GewijzigdepersonenHalCollectionLinks links) {
+  public void setLinks(GewijzigdePersonenHalCollectionLinks links) {
     this.links = links;
   }
 
 
-  public GewijzigdepersonenHalCollectie burgerservicenummers(List<String> burgerservicenummers) {
+  public GewijzigdePersonenHalCollectie burgerservicenummers(List<String> burgerservicenummers) {
     
     this.burgerservicenummers = burgerservicenummers;
     return this;
   }
 
-  public GewijzigdepersonenHalCollectie addBurgerservicenummersItem(String burgerservicenummersItem) {
+  public GewijzigdePersonenHalCollectie addBurgerservicenummersItem(String burgerservicenummersItem) {
     if (this.burgerservicenummers == null) {
       this.burgerservicenummers = new ArrayList<>();
     }
@@ -103,9 +103,9 @@ public class GewijzigdepersonenHalCollectie {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GewijzigdepersonenHalCollectie gewijzigdepersonenHalCollectie = (GewijzigdepersonenHalCollectie) o;
-    return Objects.equals(this.links, gewijzigdepersonenHalCollectie.links) &&
-        Objects.equals(this.burgerservicenummers, gewijzigdepersonenHalCollectie.burgerservicenummers);
+    GewijzigdePersonenHalCollectie gewijzigdePersonenHalCollectie = (GewijzigdePersonenHalCollectie) o;
+    return Objects.equals(this.links, gewijzigdePersonenHalCollectie.links) &&
+        Objects.equals(this.burgerservicenummers, gewijzigdePersonenHalCollectie.burgerservicenummers);
   }
 
   @Override
@@ -117,7 +117,7 @@ public class GewijzigdepersonenHalCollectie {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class GewijzigdepersonenHalCollectie {\n");
+    sb.append("class GewijzigdePersonenHalCollectie {\n");
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    burgerservicenummers: ").append(toIndentedString(burgerservicenummers)).append("\n");
     sb.append("}");

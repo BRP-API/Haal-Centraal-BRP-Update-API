@@ -124,8 +124,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Raadplegen specifieke volgindicatie
-     * Opvragen van een volgindicatie van een specifieke persoon. 
+     * Raadpleeg een volgindicatie op een persoon
+     * Vraag een volgindicatie op van een specifieke persoon. 
      * @param burgerservicenummer Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer. (required)
      * @return VolgindicatieRaadplegen
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -149,8 +149,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Raadplegen specifieke volgindicatie
-     * Opvragen van een volgindicatie van een specifieke persoon. 
+     * Raadpleeg een volgindicatie op een persoon
+     * Vraag een volgindicatie op van een specifieke persoon. 
      * @param burgerservicenummer Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer. (required)
      * @return ApiResponse&lt;VolgindicatieRaadplegen&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -175,8 +175,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Raadplegen specifieke volgindicatie (asynchronously)
-     * Opvragen van een volgindicatie van een specifieke persoon. 
+     * Raadpleeg een volgindicatie op een persoon (asynchronously)
+     * Vraag een volgindicatie op van een specifieke persoon. 
      * @param burgerservicenummer Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -259,8 +259,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Raadplegen alle actieve volgindicaties
-     * Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+     * Raadpleeg actieve volgindicaties
+     * Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
      * @return VolgindicatieCollectie
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -281,8 +281,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Raadplegen alle actieve volgindicaties
-     * Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+     * Raadpleeg actieve volgindicaties
+     * Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
      * @return ApiResponse&lt;VolgindicatieCollectie&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -304,8 +304,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Raadplegen alle actieve volgindicaties (asynchronously)
-     * Opvragen van alle actuele (actieve) volgindicaties van een abonnee. Volgindicaties met een einddatum in het verleden worden niet geleverd. 
+     * Raadpleeg actieve volgindicaties (asynchronously)
+     * Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden. 
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -396,8 +396,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Toevoegen, wijzigen of beëindigen volgindicatie
-     * Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+     * Plaats, wijzig of beëindig een volgindicatie
+     * Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
      * @param burgerservicenummer Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer. (required)
      * @param volgindicatie  (optional)
      * @return VolgindicatieRaadplegen
@@ -423,8 +423,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Toevoegen, wijzigen of beëindigen volgindicatie
-     * Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+     * Plaats, wijzig of beëindig een volgindicatie
+     * Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
      * @param burgerservicenummer Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer. (required)
      * @param volgindicatie  (optional)
      * @return ApiResponse&lt;VolgindicatieRaadplegen&gt;
@@ -451,8 +451,8 @@ public class BeherenVolgindicatiesApi {
     }
 
     /**
-     * Toevoegen, wijzigen of beëindigen volgindicatie (asynchronously)
-     * Toevoegen, wijzigen of beëindigen van een volgindicatie van een specifieke persoon. Wanneer er nog geen volgindicatie is op deze persoon wordt de volgindicatie toegevoegd. Wanneer er al een volgindicatie is op deze persoon, wordt de volgindicatie gewijzigd.  De einddatum op een volgindicatie kan worden verwijderd (leeg gemaakt) door een leeg object { } te sturen in de request body.  Een volgindicatie kan worden beëindigd door het sturen van einddatum gelijk aan de datum van gisteren. 
+     * Plaats, wijzig of beëindig een volgindicatie (asynchronously)
+     * Plaats, wijzig of beëindig een volgindicatie op een specifieke persoon. Als je de persoon nog niet volgt, wordt een volgindicatie geplaatst. Als je de persoon al wel volgt, wordt de volgindicatie gewijzigd. Verwijder de einddatum van een volgindicatie door in de request body een leeg object { } te sturen. Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen. 
      * @param burgerservicenummer Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer. (required)
      * @param volgindicatie  (optional)
      * @param _callback The callback to be executed when the API call finishes

@@ -29,7 +29,7 @@ import java.io.IOException;
 
 import org.openapitools.client.model.BadRequestFoutbericht;
 import org.openapitools.client.model.Foutbericht;
-import org.openapitools.client.model.GewijzigdepersonenHalCollectie;
+import org.openapitools.client.model.GewijzigdePersonenHalCollectie;
 import java.time.LocalDate;
 
 import java.lang.reflect.Type;
@@ -120,10 +120,10 @@ public class RaadplegenGewijzigdePersonenApi {
     }
 
     /**
-     * Raadplegen personen met gewijzigde gegevens
-     * Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+     * Raadpleeg personen met gewijzigde gegevens
+     * Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
      * @param vanaf Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)
-     * @return GewijzigdepersonenHalCollectie
+     * @return GewijzigdePersonenHalCollectie
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -138,16 +138,16 @@ public class RaadplegenGewijzigdePersonenApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public GewijzigdepersonenHalCollectie getGewijzigdePersonen(LocalDate vanaf) throws ApiException {
-        ApiResponse<GewijzigdepersonenHalCollectie> localVarResp = getGewijzigdePersonenWithHttpInfo(vanaf);
+    public GewijzigdePersonenHalCollectie getGewijzigdePersonen(LocalDate vanaf) throws ApiException {
+        ApiResponse<GewijzigdePersonenHalCollectie> localVarResp = getGewijzigdePersonenWithHttpInfo(vanaf);
         return localVarResp.getData();
     }
 
     /**
-     * Raadplegen personen met gewijzigde gegevens
-     * Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+     * Raadpleeg personen met gewijzigde gegevens
+     * Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
      * @param vanaf Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)
-     * @return ApiResponse&lt;GewijzigdepersonenHalCollectie&gt;
+     * @return ApiResponse&lt;GewijzigdePersonenHalCollectie&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -162,15 +162,15 @@ public class RaadplegenGewijzigdePersonenApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<GewijzigdepersonenHalCollectie> getGewijzigdePersonenWithHttpInfo(LocalDate vanaf) throws ApiException {
+    public ApiResponse<GewijzigdePersonenHalCollectie> getGewijzigdePersonenWithHttpInfo(LocalDate vanaf) throws ApiException {
         okhttp3.Call localVarCall = getGewijzigdePersonenValidateBeforeCall(vanaf, null);
-        Type localVarReturnType = new TypeToken<GewijzigdepersonenHalCollectie>(){}.getType();
+        Type localVarReturnType = new TypeToken<GewijzigdePersonenHalCollectie>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Raadplegen personen met gewijzigde gegevens (asynchronously)
-     * Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht. 
+     * Raadpleeg personen met gewijzigde gegevens (asynchronously)
+     * Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens. 
      * @param vanaf Alleen personen waarbij gegevens zijn gewijzigd op of na deze datum worden geleverd. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -188,10 +188,10 @@ public class RaadplegenGewijzigdePersonenApi {
         <tr><td> 0 </td><td> Er is een onverwachte fout opgetreden </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call getGewijzigdePersonenAsync(LocalDate vanaf, final ApiCallback<GewijzigdepersonenHalCollectie> _callback) throws ApiException {
+    public okhttp3.Call getGewijzigdePersonenAsync(LocalDate vanaf, final ApiCallback<GewijzigdePersonenHalCollectie> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getGewijzigdePersonenValidateBeforeCall(vanaf, _callback);
-        Type localVarReturnType = new TypeToken<GewijzigdepersonenHalCollectie>(){}.getType();
+        Type localVarReturnType = new TypeToken<GewijzigdePersonenHalCollectie>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -26,10 +26,10 @@ import java.io.IOException;
 import org.openapitools.client.model.HalLink;
 
 /**
- * GewijzigdepersonenHalCollectionLinks
+ * GewijzigdePersonenHalCollectionLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-13T13:13:10.541Z[Etc/UTC]")
-public class GewijzigdepersonenHalCollectionLinks {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T12:54:34.220Z[Etc/UTC]")
+public class GewijzigdePersonenHalCollectionLinks {
   public static final String SERIALIZED_NAME_SELF = "self";
   @SerializedName(SERIALIZED_NAME_SELF)
   private HalLink self;
@@ -39,7 +39,7 @@ public class GewijzigdepersonenHalCollectionLinks {
   private HalLink ingeschrevenPersoon;
 
 
-  public GewijzigdepersonenHalCollectionLinks self(HalLink self) {
+  public GewijzigdePersonenHalCollectionLinks self(HalLink self) {
     
     this.self = self;
     return this;
@@ -62,7 +62,7 @@ public class GewijzigdepersonenHalCollectionLinks {
   }
 
 
-  public GewijzigdepersonenHalCollectionLinks ingeschrevenPersoon(HalLink ingeschrevenPersoon) {
+  public GewijzigdePersonenHalCollectionLinks ingeschrevenPersoon(HalLink ingeschrevenPersoon) {
     
     this.ingeschrevenPersoon = ingeschrevenPersoon;
     return this;
@@ -93,9 +93,9 @@ public class GewijzigdepersonenHalCollectionLinks {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GewijzigdepersonenHalCollectionLinks gewijzigdepersonenHalCollectionLinks = (GewijzigdepersonenHalCollectionLinks) o;
-    return Objects.equals(this.self, gewijzigdepersonenHalCollectionLinks.self) &&
-        Objects.equals(this.ingeschrevenPersoon, gewijzigdepersonenHalCollectionLinks.ingeschrevenPersoon);
+    GewijzigdePersonenHalCollectionLinks gewijzigdePersonenHalCollectionLinks = (GewijzigdePersonenHalCollectionLinks) o;
+    return Objects.equals(this.self, gewijzigdePersonenHalCollectionLinks.self) &&
+        Objects.equals(this.ingeschrevenPersoon, gewijzigdePersonenHalCollectionLinks.ingeschrevenPersoon);
   }
 
   @Override
@@ -107,7 +107,7 @@ public class GewijzigdepersonenHalCollectionLinks {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class GewijzigdepersonenHalCollectionLinks {\n");
+    sb.append("class GewijzigdePersonenHalCollectionLinks {\n");
     sb.append("    self: ").append(toIndentedString(self)).append("\n");
     sb.append("    ingeschrevenPersoon: ").append(toIndentedString(ingeschrevenPersoon)).append("\n");
     sb.append("}");

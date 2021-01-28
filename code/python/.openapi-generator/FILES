@@ -15,8 +15,8 @@ openapi_client/model/__init__.py
 openapi_client/model/bad_request_foutbericht.py
 openapi_client/model/bad_request_foutbericht_all_of.py
 openapi_client/model/foutbericht.py
-openapi_client/model/gewijzigdepersonen_hal_collectie.py
-openapi_client/model/gewijzigdepersonen_hal_collection_links.py
+openapi_client/model/gewijzigde_personen_hal_collectie.py
+openapi_client/model/gewijzigde_personen_hal_collection_links.py
 openapi_client/model/hal_link.py
 openapi_client/model/invalid_params.py
 openapi_client/model/volgindicatie.py

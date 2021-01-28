@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * VolgindicatieRaadplegenAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:32:33.412Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T12:54:34.220Z[Etc/UTC]")
 public class VolgindicatieRaadplegenAllOf {
   public static final String SERIALIZED_NAME_BURGERSERVICENUMMER = "burgerservicenummer";
   @SerializedName(SERIALIZED_NAME_BURGERSERVICENUMMER)

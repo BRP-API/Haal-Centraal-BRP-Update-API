@@ -23,7 +23,7 @@ from openapi_client.model_utils import (  # noqa: F401
 )
 from openapi_client.model.bad_request_foutbericht import BadRequestFoutbericht
 from openapi_client.model.foutbericht import Foutbericht
-from openapi_client.model.gewijzigdepersonen_hal_collectie import GewijzigdepersonenHalCollectie
+from openapi_client.model.gewijzigde_personen_hal_collectie import GewijzigdePersonenHalCollectie
 
 
 class RaadplegenGewijzigdePersonenApi(object):
@@ -42,9 +42,9 @@ class RaadplegenGewijzigdePersonenApi(object):
             self,
             **kwargs
         ):
-            """Raadplegen personen met gewijzigde gegevens  # noqa: E501
+            """Raadpleeg personen met gewijzigde gegevens  # noqa: E501
 
-            Opvragen lijst met burgerservicenummers van personen waarop in de gegevens een wijziging is aangebracht.   # noqa: E501
+            Vraag een lijst op met burgerservicenummers van personen met gewijzigde gegevens.   # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
@@ -75,7 +75,7 @@ class RaadplegenGewijzigdePersonenApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                GewijzigdepersonenHalCollectie
+                GewijzigdePersonenHalCollectie
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -102,7 +102,7 @@ class RaadplegenGewijzigdePersonenApi(object):
 
         self.get_gewijzigde_personen = Endpoint(
             settings={
-                'response_type': (GewijzigdepersonenHalCollectie,),
+                'response_type': (GewijzigdePersonenHalCollectie,),
                 'auth': [],
                 'endpoint_path': '/wijzigingen',
                 'operation_id': 'get_gewijzigde_personen',

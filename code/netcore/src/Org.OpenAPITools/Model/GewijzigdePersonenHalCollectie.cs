@@ -26,48 +26,33 @@ using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 namespace Org.OpenAPITools.Model
 {
     /// <summary>
-    /// De Link Object zoals gespecificeerd in https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5; Deze link kan als templated link worden aangeboden. [URI-templating is hier beschreven](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/uri-templating.feature).
+    /// GewijzigdePersonenHalCollectie
     /// </summary>
-    [DataContract(Name = "HalLink")]
-    public partial class HalLink : IEquatable<HalLink>, IValidatableObject
+    [DataContract(Name = "GewijzigdePersonenHalCollectie")]
+    public partial class GewijzigdePersonenHalCollectie : IEquatable<GewijzigdePersonenHalCollectie>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="HalLink" /> class.
+        /// Initializes a new instance of the <see cref="GewijzigdePersonenHalCollectie" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected HalLink() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HalLink" /> class.
-        /// </summary>
-        /// <param name="href">href (required).</param>
-        /// <param name="templated">templated.</param>
-        /// <param name="title">Voor mens leesbaar label bij de link.</param>
-        public HalLink(string href = default(string), bool templated = default(bool), string title = default(string))
+        /// <param name="links">links.</param>
+        /// <param name="burgerservicenummers">burgerservicenummers.</param>
+        public GewijzigdePersonenHalCollectie(GewijzigdePersonenHalCollectionLinks links = default(GewijzigdePersonenHalCollectionLinks), List<string> burgerservicenummers = default(List<string>))
         {
-            // to ensure "href" is required (not null)
-            this.Href = href ?? throw new ArgumentNullException("href is a required property for HalLink and cannot be null");
-            this.Templated = templated;
-            this.Title = title;
+            this.Links = links;
+            this.Burgerservicenummers = burgerservicenummers;
         }
 
         /// <summary>
-        /// Gets or Sets Href
+        /// Gets or Sets Links
         /// </summary>
-        [DataMember(Name = "href", IsRequired = true, EmitDefaultValue = false)]
-        public string Href { get; set; }
+        [DataMember(Name = "_links", EmitDefaultValue = false)]
+        public GewijzigdePersonenHalCollectionLinks Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets Templated
+        /// Gets or Sets Burgerservicenummers
         /// </summary>
-        [DataMember(Name = "templated", EmitDefaultValue = false)]
-        public bool Templated { get; set; }
-
-        /// <summary>
-        /// Voor mens leesbaar label bij de link
-        /// </summary>
-        /// <value>Voor mens leesbaar label bij de link</value>
-        [DataMember(Name = "title", EmitDefaultValue = false)]
-        public string Title { get; set; }
+        [DataMember(Name = "burgerservicenummers", EmitDefaultValue = false)]
+        public List<string> Burgerservicenummers { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -76,10 +61,9 @@ namespace Org.OpenAPITools.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class HalLink {\n");
-            sb.Append("  Href: ").Append(Href).Append("\n");
-            sb.Append("  Templated: ").Append(Templated).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("class GewijzigdePersonenHalCollectie {\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  Burgerservicenummers: ").Append(Burgerservicenummers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,33 +84,30 @@ namespace Org.OpenAPITools.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as HalLink);
+            return this.Equals(input as GewijzigdePersonenHalCollectie);
         }
 
         /// <summary>
-        /// Returns true if HalLink instances are equal
+        /// Returns true if GewijzigdePersonenHalCollectie instances are equal
         /// </summary>
-        /// <param name="input">Instance of HalLink to be compared</param>
+        /// <param name="input">Instance of GewijzigdePersonenHalCollectie to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(HalLink input)
+        public bool Equals(GewijzigdePersonenHalCollectie input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Href == input.Href ||
-                    (this.Href != null &&
-                    this.Href.Equals(input.Href))
+                    this.Links == input.Links ||
+                    (this.Links != null &&
+                    this.Links.Equals(input.Links))
                 ) && 
                 (
-                    this.Templated == input.Templated ||
-                    this.Templated.Equals(input.Templated)
-                ) && 
-                (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    this.Burgerservicenummers == input.Burgerservicenummers ||
+                    this.Burgerservicenummers != null &&
+                    input.Burgerservicenummers != null &&
+                    this.Burgerservicenummers.SequenceEqual(input.Burgerservicenummers)
                 );
         }
 
@@ -139,11 +120,10 @@ namespace Org.OpenAPITools.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Href != null)
-                    hashCode = hashCode * 59 + this.Href.GetHashCode();
-                hashCode = hashCode * 59 + this.Templated.GetHashCode();
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
+                if (this.Links != null)
+                    hashCode = hashCode * 59 + this.Links.GetHashCode();
+                if (this.Burgerservicenummers != null)
+                    hashCode = hashCode * 59 + this.Burgerservicenummers.GetHashCode();
                 return hashCode;
             }
         }
