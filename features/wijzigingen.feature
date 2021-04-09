@@ -40,7 +40,7 @@ Functionaliteit: Als gebruiker wil ik wijzigingen doorkrijgen op gebruikers die 
             Als gebruiker "A" op 15 maart 2021 de wijzigingen vraagt met /wijzigingen
             Dan bevat het antwoord in "burgerservicenummers" een item met de waarde "999994220"
 
-        Voorbeeld: Gebruiker krijgt wijzigingen tot en met wijzigingen tot moment van request
+        Voorbeeld: Gebruiker krijgt wijzigingen die op dezelfde dag hebben plaatsgevonden als het vragen om de wijzigingen
             Gegeven gebruiker "A" heeft op 17 januari 2021 een volgindicatie gezet op de persoon met burgerservicenummer "999993847" en geen einddatum
             En op 4 maart 2021 is in de BRP registratie een wijziging doorgevoerd in de gegevens van de persoon "999993847"
             Als gebruiker "A" op 4 maart 2021 de wijzigingen vraagt met /wijzigingen
