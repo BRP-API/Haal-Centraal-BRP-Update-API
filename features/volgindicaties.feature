@@ -35,12 +35,6 @@ Functionaliteit: Als Gemeente wil ik dat volgindicaties geplaatst/beëindigd met
          Als gebruiker "A" op 5 maart 2021 een volgindicatie zet op de persoon met burgerservicenummer "999993483" met einddatum "2021-03-15"
          Dan stuurt de update applicatie een Ap01 bericht met burgerservicenummer "999993483" naar het GBA-V
 
-      Voorbeeld: Een gebruiker verlengt de einddatum van de volgindicatie
-         Gegeven de persoon met burgerservicenummer "999992806" is NIET ingeschreven in deze gemeente
-         En gebruiker "A" heeft een volgindicatie voor de persoon met burgerservicenummer "999992806" en einddatum "2021-03-15"
-         Als gebruiker "A" op 5 maart 2021 een volgindicatie zet op de persoon met burgerservicenummer "999992806" met einddatum "2021-06-30"
-         Dan stuurt de update applicatie GEEN Ap01 bericht met burgerservicenummer "999992806" naar het GBA-V
-
       Voorbeeld: Een gebruiker heropent een beëindigde volgindicatie
          Gegeven de persoon met burgerservicenummer "000009945" is NIET ingeschreven in deze gemeente
          En gebruiker "A" heeft een volgindicatie voor de persoon met burgerservicenummer "000009945" en einddatum "2021-03-01"
@@ -56,7 +50,7 @@ Functionaliteit: Als Gemeente wil ik dat volgindicaties geplaatst/beëindigd met
          Als gebruiker "B" op 5 maart 2021 een volgindicatie zet op de persoon met burgerservicenummer "999990949" en geen einddatum
          Dan stuurt de update applicatie een Ap01 bericht met burgerservicenummer "999990949" naar het GBA-V
 
-   Rule: Stuur geen Ap01 als een buitengemeentelijk persoon actieve volgindicaties heeft
+   Rule: Stuur geen Ap01 bij het plaatsen van een volgindicatie bij een binnengemeentelijk persoon
       
       Voorbeeld: Een gebruiker zet een volgindicatie op een binnengemeentelijk persoon
          Gegeven de persoon met burgerservicenummer "999995066" is ingeschreven in deze gemeente
@@ -64,7 +58,13 @@ Functionaliteit: Als Gemeente wil ik dat volgindicaties geplaatst/beëindigd met
          Als gebruiker "A" op 5 maart 2021 een volgindicatie zet op de persoon met burgerservicenummer "999995066" en geen einddatum
          Dan stuurt de update applicatie GEEN Ap01 bericht met burgerservicenummer "999995066" naar het GBA-V
 
-   Rule: Wanneer meerdere gebruikers dezelfde persoon volgen, wordt er maar één keer een volgindicatie in GBA-V gezet
+   Rule: Stuur geen Ap01 als een buitengemeentelijk persoon actieve volgindicaties in GBA-V heeft
+
+      Voorbeeld: Een gebruiker verlengt de einddatum van de volgindicatie
+         Gegeven de persoon met burgerservicenummer "999992806" is NIET ingeschreven in deze gemeente
+         En gebruiker "A" heeft een volgindicatie voor de persoon met burgerservicenummer "999992806" en einddatum "2021-03-15"
+         Als gebruiker "A" op 5 maart 2021 een volgindicatie zet op de persoon met burgerservicenummer "999992806" met einddatum "2021-06-30"
+         Dan stuurt de update applicatie GEEN Ap01 bericht met burgerservicenummer "999992806" naar het GBA-V
 
       Voorbeeld: Een gebruiker zet een volgindicatie op een persoon die al gevolgd wordt door een andere gebruiker
          Gegeven de persoon met burgerservicenummer "999990457" is NIET ingeschreven in deze gemeente
