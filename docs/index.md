@@ -4,7 +4,6 @@ title: Haal Centraal BRP tabellen bevragen
 ---
 # Haal Centraal BRP update API
 ![lint oas](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/lint-oas/badge.svg)
-![generate sdks](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/generate-sdks/badge.svg)
 ![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/workflows/generate-postman-collection/badge.svg)
 
 Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van personen. Bedoeld voor gebruik in combinatie met de [BRP bevragen API](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"} om (tijdelijk) lokale kopiegegevens bij afnemers actueel te houden. Zo kun je de transitie naar API's versnellen en je distributiesysteem of gegevensmagazijn uitfaseren. De API wordt niet door RvIG aangeboden. 
