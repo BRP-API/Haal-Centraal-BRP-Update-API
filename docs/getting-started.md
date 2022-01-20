@@ -7,8 +7,8 @@ De 'BRP update' Web API is gespecificeerd in [OpenAPI specifications (OAS)](http
 
 Wil je de API gebruiken? Dit kun je doen:
 
-1. [Bekijk de functionaliteit en specificaties](#functionaliteit-en-specificaties)
-2. [Implementeer de API](#bouw-de-api)
+1. Bekijk de [functionaliteit en specificaties](#functionaliteit-en-specificaties)
+2. [Implementeer de API Client](#implementeer-de-api-client)
 3. [Probeer en test de API](#probeer-en-test-de-api)
 
 ## Functionaliteit en specificaties
@@ -30,18 +30,18 @@ Je kunt de functionele documentatie lezen in [features](./features).
 * In het antwoord zitten de burgerservicecnummers van personen waarbij er iets is gewijzigd aan de gegevens op of na die datum
 * Gebruik het template in _links.ingeschrevenPersoon.href in combinatie met een burgerservicenummer om de actuele gegevens van de persoon op te vragen
 
-## Bouw de API
-Client code kan worden gegenereerd vanuit de "[genereervariant](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" van de API-specificaties en een code generator. Een overzicht van code generatoren is te vinden op [OpenAPI.Tools](https://openapi.tools/#sdk){:target="_blank" rel="noopener"}.
+## Implementeer de API client
+Client code kun je genereren met de "[genereervariant](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" van de API-specificaties en een code generator. Een overzicht met codegeneratoren kun je vinden op [OpenAPI.Tools](https://openapi.tools/#sdk){:target="_blank" rel="noopener"}.
 
-Deze repo bevat scripts waarmee met behulp van [OpenAPI Generator](https://openapi-generator.tech/){:target="_blank" rel="noopener"} client code kan worden gegenereerd in JAVA, .NET (Full Framework & Core) en Python. De makkelijkste manier om de code generatie scripts te gebruiken, is door deze repo te clonen. Na het clonen kan met `npm install` de benodigde packages worden geïnstalleerd. Vervolgens kan met `npm run <script naam>` één van de volgende scripts worden uitgevoerd:
+Deze repo bevat scripts waarmee je met [OpenAPI Generator](https://openapi-generator.tech/){:target="_blank" rel="noopener"} client code kunt genereren in JAVA, .NET (Full Framework & Core) en Python. De makkelijkste manier om de code generatie scripts te gebruiken, is door deze repo te clonen. Na het clonen kun je met `npm install` de benodigde packages installeren en kun je met npm run <script naam> één van de volgende scripts uitvoeren:
 - oas:generate-java-client (voor JAVA client code)
 - oas:generate-netcore-client (voor .NET Core client code)
 - oas:generate-net-client (voor .NET Full Framework client code)
 - oas:generate-python-client (voor Python client code)
 
-Een lijst met andere ondersteunde generator opties is te vinden in de [Generators List](https://openapi-generator.tech/docs/generators){:target="_blank" rel="noopener"} van OpenAPI Generator.
+Een lijst met andere ondersteunde generator opties kun je vinden in de [Generators List](https://openapi-generator.tech/docs/generators){:target="_blank" rel="noopener"} van OpenAPI Generator.
 
-Note. De prerequisite OpenAPI Generator is JAVA. Een JAVA runtime moet worden geïnstalleerd voordat OpenAPI Generator kan worden gebruikt.
-
+Note. De prerequisite van OpenAPI Generator is JAVA. Je moet een JAVA runtime installeren voordat je OpenAPI Generator kunt gebruiken
+  
 ## Probeer en test de API
 Op de Haal Centraal demo-omgeving (www.haalcentraal.nl/haalcentraal/api/) is de BRP update API nog niet beschikbaar.
