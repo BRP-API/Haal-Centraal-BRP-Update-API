@@ -106,10 +106,10 @@ Op elke werkdag worden er wijzigingen ontvangen voor enkele burgerservicenummers
 
 Vervolgens kun je wijzigingen opvragen met GET /wijzigingen. Daarbij kan je de query-parameter 'vanaf' gebruiken om alleen wijzigingen te ontvangen vanaf de opgegeven datum.
 
-Je zult pas wijzigingen ontvangen van na het moment dat je de volgindicatie hebt gezet. Wanneer je vandaag een volgindicatie toevoegt op een burgerservicenummer, dan zal je dus nog niet direct wijzigingen ontvangen voor die persoon.
+Je zult pas wijzigingen ontvangen van na het moment dat je de volgindicatie hebt gezet. Wanneer je vandaag een volgindicatie toevoegt op een burgerservicenummer, dan zal je dus nog niet direct wijzigingen hebben voor die persoon.
 Als je bijvoorbeeld op maandag 11 april PUT /volgindicaties/999994669 doet (dit burgerservicenummer krijgt elke maandag een wijziging), dan zal je op 11 april bij GET /wijzigingen?vanaf=2022-04-11 nog niet burgerservicenummer '999994669' ontvangen. Wanneer je vervolgens op 18 april (maandag een week later) GET /wijzigingen?vanaf=2022-04-18 vraagt, zal je burgerservicenummer '999994669' wel ontvangen.
 
 Als je bijvoorbeeld op maandag 11 april PUT /volgindicaties/999990019 doet (dit burgerservicenummer krijgt elke dinsdag een wijziging), dan zal je op 11 april bij GET /wijzigingen?vanaf=2022-04-11 nog niet burgerservicenummer '999990019' ontvangen. Wanneer je vervolgens op 12 april (maandag een week later) GET /wijzigingen?vanaf=2022-04-12 vraagt, zal je burgerservicenummer '999990019' wel ontvangen.
 
-Houd er dus rekening mee dat je een doorlooptijd van ten minste twee dagen hebt om de update API uit te proberen of testen: eerste dag om de volgindicatie te zetten, tweede dag om de wijzigingen op te vragen.
+Houd er dus rekening mee dat je een doorlooptijd van ten minste twee kalenderdagen hebt om de BRP update API uit te proberen of testen: eerste dag om de volgindicatie te zetten, tweede dag om de wijzigingen op te vragen.
 
