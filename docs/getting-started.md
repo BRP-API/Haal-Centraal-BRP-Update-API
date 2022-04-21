@@ -111,5 +111,5 @@ Als je bijvoorbeeld op maandag 11 april PUT /volgindicaties/999994669 doet (dit 
 
 Als je bijvoorbeeld op maandag 11 april PUT /volgindicaties/999990019 doet (dit burgerservicenummer krijgt elke dinsdag een wijziging), dan zal je op 11 april bij GET /wijzigingen?vanaf=2022-04-11 nog niet burgerservicenummer '999990019' ontvangen. Wanneer je vervolgens op 12 april (maandag een week later) GET /wijzigingen?vanaf=2022-04-12 vraagt, zal je burgerservicenummer '999990019' wel ontvangen.
 
-Houd er dus rekening mee dat je een doorlooptijd van ten minste twee kalenderdagen hebt om de BRP update API uit te proberen of testen: eerste dag om de volgindicatie te zetten, tweede dag om de wijzigingen op te vragen.
+Houd er dus rekening mee dat je ten minste twee kalenderdagen nodig hebt om de BRP update API uit te proberen of testen: eerste dag om de volgindicatie te zetten, tweede dag om de wijzigingen op te vragen.
 
