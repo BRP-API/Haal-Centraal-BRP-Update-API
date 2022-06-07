@@ -94,6 +94,7 @@ Je kan een volgindicatie beëindigen door de einddatum voor het volgen op te nem
 ```
 
 Op elke werkdag worden er wijzigingen ontvangen voor enkele burgerservicenummers. Je kunt de volgende burgerservicenummers gebruiken:
+
 | Weekdag   | burgerservicenummers |
 |---------- |--------------------- |
 | maandag   | 999994669, 999992740 |
