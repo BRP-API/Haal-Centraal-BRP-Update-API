@@ -13,8 +13,8 @@
     "version" : "1.0.0"
   },
   "servers" : [ {
-    "url" : "https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api",
-    "description" : "SwaggerHub API Auto Mocking"
+    "url" : "https://www.haalcentraal.nl/haalcentraal/api/brpupdate",
+    "description" : "Haal Centraal proefomgeving"
   } ],
   "paths" : {
     "/volgindicaties" : {
