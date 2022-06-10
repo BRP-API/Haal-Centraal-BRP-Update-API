@@ -1,8 +1,8 @@
 openapi: 3.0.0
 servers:
 # Added by API Auto Mocking Plugin
-  - description: "SwaggerHub API Auto Mocking"
-    url: https://virtserver.swaggerhub.com/VNGRealisatie/api/brp_update_api
+  - description: "Haal Centraal proefomgeving"
+    url: https://www.haalcentraal.nl/haalcentraal/api/brpupdate
 info:
   title: "BRP Update API"
   description: |
