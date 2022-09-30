@@ -44,7 +44,7 @@ Een lijst met andere ondersteunde generator opties kun je vinden in de [Generato
 Note. De prerequisite van OpenAPI Generator is JAVA. Je moet een JAVA runtime installeren voordat je OpenAPI Generator kunt gebruiken
   
 ## Probeer en test de API
-Wil je de 'BRP-Update' Web API proberen en testen? Kijk op: `https://www.haalcentraal.nl/haalcentraal/api/brpupdate`
+Wil je de 'BRP-Update' Web API proberen en testen? Dat kan op de demo omgeving!`
 
 Om de web api op de demo-omgeving te gebruiken heb je een apikey nodig. Deze voeg je aan een request toe als header "X-API-KEY". Een API-key vraag je aan bij de product owner [c.dingemanse@comites.nl](mailto:c.dingemanse@comites.nl).
 
