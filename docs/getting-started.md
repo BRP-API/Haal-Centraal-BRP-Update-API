@@ -28,7 +28,7 @@ Je kunt de functionele documentatie lezen in [features](./features).
 ### Opvragen wijzigingen op personen
 * Vul de datum "vanaf" in om alle wijzigingen vanaf die datum te ontvangen
 * In het antwoord zitten de burgerservicecnummers van personen waarbij er iets is gewijzigd aan de gegevens op of na die datum
-* Gebruik het template in _links.ingeschrevenPersoon.href in combinatie met een burgerservicenummer om de actuele gegevens van de persoon op te vragen
+* Gebruik de burgerservicenummers om de actuele gegevens van de persoon op te vragen
 
 ## Implementeer de API client
 Client code kun je genereren met de "[genereervariant](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" van de API-specificaties en een code generator. Een overzicht met codegeneratoren kun je vinden op [OpenAPI.Tools](https://openapi.tools/#sdk){:target="_blank" rel="noopener"}.
