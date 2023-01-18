@@ -6,8 +6,8 @@ Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van p
 De API wordt nog niet door RvIG aangeboden. Om de migratie naar API's te versnellen besluiten sommige gemeenten de API zelf aan te bieden.  
 
 ## Direct uitproberen?
-* Bekijk de specificaties met [Swagger UI](swagger-ui) of [Redoc](redoc)
-* Lees de [Getting started](getting-started)
+* Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/swagger-ui) of [Redoc](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/redoc)
+* Lees de [Getting started](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/getting-started)
 * Download de [technische specificaties](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml)
 * Vraag een API-key voor toegang tot de Haal Centraal probeeromgeving aan bij de product owner [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
 
