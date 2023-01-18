@@ -31,7 +31,7 @@ Je kunt de functionele documentatie lezen in [features](./features).
 * Gebruik de burgerservicenummers om de actuele gegevens van de persoon op te vragen
 
 ## Implementeer de API client
-Client code kun je genereren met de "[genereervariant](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" van de API-specificaties en een code generator. Een overzicht met codegeneratoren kun je vinden op [OpenAPI.Tools](https://openapi.tools/#sdk){:target="_blank" rel="noopener"}.
+Client code kun je genereren met de "[genereervariant](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" van de API-specificaties en een code generator. Een overzicht met codegeneratoren kun je vinden op [OpenAPI.Tools](https://openapi.tools/#sdk){:target="_blank" rel="noopener"}.
 
 Deze repo bevat scripts waarmee je met [OpenAPI Generator](https://openapi-generator.tech/){:target="_blank" rel="noopener"} client code kunt genereren in JAVA, .NET (Full Framework & Core) en Python. De makkelijkste manier om de code generatie scripts te gebruiken, is door deze repo te clonen. Na het clonen kun je met `npm install` de benodigde packages installeren en kun je met npm run <script naam> één van de volgende scripts uitvoeren:
 - oas:generate-java-client (voor JAVA client code)
@@ -50,7 +50,7 @@ Om de web api op de demo-omgeving te gebruiken heb je een apikey nodig. Deze voe
 
 ### Importeer de specificaties in Postman
 
-De werking van de 'BRP-Update' Web API is het makkelijkst te testen met behulp van [Postman](https://www.getpostman.com/){:target="_blank" rel="noopener"}. In Postman kun je de "[API specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" importeren en visueel de BRP-update API aanroepen. Volg deze stappen om de Postman collection te importeren:
+De werking van de 'BRP-Update' Web API is het makkelijkst te testen met behulp van [Postman](https://www.getpostman.com/){:target="_blank" rel="noopener"}. In Postman kun je de "[API specificaties](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" importeren en visueel de BRP-update API aanroepen. Volg deze stappen om de Postman collection te importeren:
 
 In Postman kun je de 'Bevraging Persoon' OpenAPI specificatie importeren en visueel de verschillende endpoints aanroepen. Volg deze stappen om het OpenAPI specificatie bestand te importeren:
 
@@ -59,7 +59,7 @@ In Postman kun je de 'Bevraging Persoon' OpenAPI specificatie importeren en visu
 2.Selecteer 'Import From Link' tab, plak de volgende url in de 'Enter a URL and press Import' textbox en klik op de Import button
 
 ``` url
-https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/master/specificatie/genereervariant/openapi.yaml
+https://raw.githubusercontent.com/BRP-API/Haal-Centraal-BRP-Update-API/master/specificatie/genereervariant/openapi.yaml
 ```
 
 3.Klik op de Next button om een Postman collectie te genereren uit het OpenAPI specificatie bestand
