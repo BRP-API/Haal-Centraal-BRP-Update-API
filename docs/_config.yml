@@ -18,7 +18,7 @@ nav:
       - title: Getting started
         path: /getting-started
       - title: User stories
-        url: https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/user-stories-prod
+        url: user-stories-prod
         path: /user-stories
       - title: Bevragen API (swagger-ui)
         path: /swagger-ui
@@ -32,7 +32,7 @@ plugins:
 
 remote_theme: VNG-Realisatie/jekyll-theme-haal-centraal
 
-github: VNG-Realisatie/Haal-Centraal-BRP-Update-API
+github: BRP-API/Haal-Centraal-BRP-Update-API
 
 theme: jekyll-theme-time-machine
 
