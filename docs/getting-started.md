@@ -12,7 +12,7 @@ Wil je de API gebruiken? Dit kun je doen:
 3. [Probeer en test de API](#probeer-en-test-de-api)
 
 ## Functionaliteit en specificaties
-Met deze API kun je beheren welke personen je wilt volgen. Vervolgens kun je opvragen van welke personen die je volgt er gegevens zijn gewijzigd vanaf een bepaalde datum.
+Met deze API kun je een lokale kopie actueel houden. Je kunt beheren welke personen je wilt volgen, en opvragen van welke gevolgde personen gegevens zijn gewijzigd vanaf een bepaalde datum.
 
 Je kunt een visuele representatie van de specificatie bekijken met [Swagger UI]({{ site.baseurl }}/swagger-ui) of [Redoc]({{ site.baseurl }}/redoc).
 
