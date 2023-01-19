@@ -3,21 +3,21 @@
 ![generate postman collection](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/workflows/generate-postman-collection/badge.svg)
 
 Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van personen. Bedoeld voor gebruik in combinatie met de [BRP bevragen API](https://vng-realisatie.github.io/Haal-Centraal-BRP-bevragen), bijvoorbeeld om (tijdelijk) lokale kopiegegevens actueel te houden.
-De API wordt nog niet door RvIG aangeboden. Om de migratie naar API's te versnellen besluiten sommige gemeenten de API zelf aan te bieden.  
+De API wordt niet door RvIG aangeboden. Om de migratie naar API's te versnellen kunnen gemeenten deze API lokaal aanbieden.  
 
 ## Direct uitproberen?
 * Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/swagger-ui) of [Redoc](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/redoc)
 * Lees de [Getting started](https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/getting-started)
 * Download de [technische specificaties](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml)
-* Vraag een API-key voor toegang tot de Haal Centraal probeeromgeving aan bij de product owner [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
+* Vraag een API-key voor toegang tot de Haal Centraal probeeromgeving aan bij de product owner [cathy.dingemanse@denhaag.nl](mailto:c.dingemanse@comites.nl)
 
 ## Heb je meer nodig? 
-Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://BRP-API.github.io/Haal-Centraal-BRP-bevragen) om de gewijzigde gegevens van een persoon op te halen.
+Gebruik de BRP update API in combinatie met de [BRP Personen bevragen API](https://BRP-API.github.io/Haal-Centraal-BRP-bevragen) om de gewijzigde gegevens van een persoon op te halen.
 
 ## Bronnen
 
 * [Productvisie Haal Centraal](https://vng-realisatie.github.io/Haal-Centraal)
-* [API Design Visie](https://github.com/Geonovum/KP-APIs/tree/master/Werkgroep%20Design%20Visie)
+* [API Design Visie](https://github.com/Geonovum/KP-APIs/blob/master/Werkgroep%20API%20design%20visie/API%20Design%20Visie.md)
 * [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/)
 
 ## Contact
