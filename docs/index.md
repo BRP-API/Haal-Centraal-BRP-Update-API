@@ -22,7 +22,7 @@ Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://BRP-AP
 ## Bronnen
 
 * [Productvisie Haal Centraal](https://vng-realisatie.github.io/Haal-Centraal){:target="_blank" rel="noopener"}
-* [API Design Visie](https://github.com/Geonovum/KP-APIs/blob/master/Werkgroep%20API%20design%20visie/API%20Design%20Visie.md){:target="_blank" rel="noopener"}
+* [API Design Visie](https://github.com/Geonovum/KP-APIs/blob/master/overleggen/Werkgroep%20API%20design%20visie/API%20Design%20Visie.md){:target="_blank" rel="noopener"}
 * [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/){:target="_blank" rel="noopener"}
 
 ## Contact
