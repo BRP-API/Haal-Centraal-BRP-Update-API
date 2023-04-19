@@ -17,7 +17,7 @@ Gebruik de BRP update API in combinatie met de [BRP Personen bevragen API](https
 ## Bronnen
 
 * [Productvisie Haal Centraal](https://vng-realisatie.github.io/Haal-Centraal)
-* [API Design Visie](https://github.com/Geonovum/KP-APIs/blob/master/Werkgroep%20API%20design%20visie/API%20Design%20Visie.md)
+* [API Design Visie](https://github.com/Geonovum/KP-APIs/blob/master/overleggen/Werkgroep%20API%20design%20visie/API%20Design%20Visie.md)
 * [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/)
 
 ## Contact
