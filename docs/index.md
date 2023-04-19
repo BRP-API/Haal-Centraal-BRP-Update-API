@@ -27,6 +27,11 @@ Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://BRP-AP
 
 ## Contact
 
+* Bug Melden
+  [Maak een bug issue aan >>](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
+* Verbeteringen doorgeven
+  [Maak een verbeter issue aan >>](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
+
 * Product Owner: Cathy Dingemanse, [c.dingemanse@comites.nl](mailto:c.dingemanse@comites.nl)
 * Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
 * Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
