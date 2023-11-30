@@ -6,11 +6,12 @@ servers:
 info:
   title: "BRP Update API"
   description: |
-     Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.
-     Om lokale kopiegegevens actueel te houden kun je de volgende procedure volgen:
-     1. Zet de volgindicatie.
-     2. Vraag de persoonsgegevens op met de BRP Bevragen API.
-     3. Vraag periodiek (bijvoorbeeld dagelijks) de wijzigingen op met GET /wijzigingen. Gebruik parameter "vanaf" met de datum dat de laatste/vorige keer wijzigingen waren gevraagd. Voor elk burgerservicenummer in de response "burgerservicenummers" vraag je de persoonsgegevens op met de BRP Bevragen API.
+    Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.
+
+    Om lokale kopiegegevens actueel te houden kun je de volgende procedure volgen:
+    1. Zet de volgindicatie.
+    2. Vraag de persoonsgegevens op met de BRP Bevragen API.
+    3. Vraag periodiek (bijvoorbeeld dagelijks) de wijzigingen op met GET /wijzigingen. Gebruik parameter "vanaf" met de datum dat de laatste/vorige keer wijzigingen waren gevraagd. Voor elk burgerservicenummer in de response "burgerservicenummers" vraag je de persoonsgegevens op met de BRP Bevragen API.
   version: "1.0.0"
   contact:
     url: https://github.com/JohanBoer/Haal-Centraal-BRP-Update-API
@@ -217,6 +218,10 @@ components:
       allOf:
         - $ref: '#/components/schemas/Volgindicatie'
         - properties:
+            begindatum:
+              type: "string"
+              format: "date"
+              description: "Datum sinds wanneer de volgindicatie actief is."
             burgerservicenummer:
               type: string
               description: "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer."
