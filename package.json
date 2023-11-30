@@ -1,5 +1,5 @@
 {
-  "name": "Haal-Centraal-BRP-Update-API",
+  "name": "haal-centraal-brp-update-api",
   "version": "1.0.0",
   "description": "Met deze API kun je opvragen welke door jou gevolgde personen zijn gewijzigd in de BRP. Je kunt je abonneren op een persoon die je wilt volgen, en je kunt opvragen welke personen door jou worden gevolgd. Je kunt deze API gebruiken in combinatie met de BRP bevragen API, bijvoorbeeld om lokale kopiegegevens actueel te houden.",
   "main": "index.js",
@@ -12,35 +12,38 @@
     "oas:generate-netcore-client": "npm run oas:generate-client -- -o ./code/netcore -g csharp-netcore --additional-properties=optionalProjectFile=false,optionalAssemblyInfo=false",
     "oas:generate-net-client": "npm run oas:generate-client -- -o ./code/net -g csharp --additional-properties=optionalProjectFile=false,optionalAssemblyInfo=false",
     "oas:generate-python-client": "npm run oas:generate-client -- -o ./code/python -g python --additional-properties=optionalProjectFile=false,optionalAssemblyInfo=false",
-    "oas:generate-postman-collection": "openapi2postmanv2 -s ./specificatie/genereervariant/openapi.yaml -o ./test/BRP-Update-postman-collection.json --pretty",
     "oas:lint": "spectral lint ./specificatie/openapi.yaml",
     "oas:lint-genereervariant": "spectral lint ./specificatie/genereervariant/openapi.yaml",
-    "preoas:resolve": "mvn-dl io.swagger.codegen.v3:swagger-codegen-cli:3.0.19 -f swagger-codegen-cli.jar",
+    "preoas:resolve": "mvn-dl io.swagger.codegen.v3:swagger-codegen-cli:3.0.41 -f swagger-codegen-cli.jar",
     "oas:resolve": "java -jar swagger-codegen-cli.jar generate -i ./specificatie/openapi.yaml -l openapi-yaml -o ./specificatie/genereervariant && java -jar swagger-codegen-cli.jar generate -i ./specificatie/openapi.yaml -l openapi -o ./specificatie/genereervariant",
     "postoas:resolve": "rm swagger-codegen-cli.jar",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "unstage-generated": "git reset HEAD ./specificatie/genereervariant/openapi.*",
+    "rollback-generated": "git checkout ./specificatie/genereervariant/openapi.*",
+    "pre-commit": "npm run oas:lint && npm run oas:resolve && npm run oas:lint-genereervariant && npm run unstage-generated",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API.git"
+    "url": "git+https://github.com/BRP-API/Haal-Centraal-BRP-Update-API.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API/issues"
+    "url": "https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/issues"
   },
-  "homepage": "https://github.com/VNG-Realisatie/Haal-Centraal-BRP-Update-API#readme",
+  "homepage": "https://github.com/BRP-API/Haal-Centraal-BRP-Update-API#readme",
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.1.16",
-    "@stoplight/spectral": "^5.8.0",
-    "husky": "^4.3.7",
-    "mvn-dl": "^5.1.0",
-    "openapi-to-postmanv2": "^2.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run oas:lint && npm run oas:resolve && npm run oas:lint-genereervariant"
-    }
+    "@cucumber/cucumber": "^10.0.1",
+    "@openapitools/openapi-generator-cli": "^2.7.0",
+    "@stoplight/spectral-cli": "^6.11.0",
+    "axios": "^1.6.2",
+    "chai": "^4.3.10",
+    "cucumber-html-reporter": "^7.1.1",
+    "deep-equal-in-any-order": "^2.0.6",
+    "husky": "^8.0.3",
+    "mvn-dl": "^6.1.1",
+    "nswag": "^13.20.0",
+    "openapi-to-postmanv2": "^4.18.0"
   }
 }

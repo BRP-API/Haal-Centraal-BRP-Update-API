@@ -1,6 +1,11 @@
 baseurl: "/Haal-Centraal-BRP-Update-API"
 apiname: "BRP Update API"
 url: "http://localhost:4000"
+# M.b.v. de optionele variabele 'logo' kan een ander logo dan het VNG logo in de rechterbovenhoek geplaatst worden.
+# Het betreffende bestand zal dan wel in de folder '\assets\img' van het remote the 'VNG-Realisatie/jekyll-theme-haal-centraal' moeten worden geplaatst.
+# Met de variabele 'organisation-url' kan de link onder het logo worden bepaald.
+logo: "BZK_RIG_Logo_online_ex_pos_nl.png"
+organisation-url: "http://www.rvig.nl"
 # nav is t.b.v. generatie side-navigation menu.
 # Een 'title' zonder path of url genereert slechts een kopje.
 # 'path' vormt tezamen met de baseurl de url waarmee de 'href' wordt gevuld. 
@@ -18,7 +23,7 @@ nav:
       - title: Getting started
         path: /getting-started
       - title: User stories
-        url: https://vng-realisatie.github.io/Haal-Centraal-BRP-Update-API/user-stories-prod
+        url: user-stories-prod
         path: /user-stories
       - title: Bevragen API (swagger-ui)
         path: /swagger-ui
@@ -32,7 +37,7 @@ plugins:
 
 remote_theme: VNG-Realisatie/jekyll-theme-haal-centraal
 
-github: VNG-Realisatie/Haal-Centraal-BRP-Update-API
+github: BRP-API/Haal-Centraal-BRP-Update-API
 
 theme: jekyll-theme-time-machine
 
