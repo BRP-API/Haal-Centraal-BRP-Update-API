@@ -29,9 +29,9 @@ Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://BRP-AP
 * Verbeteringen doorgeven
   [Maak een verbeter issue aan >>](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
 
-* Product Owner: Cathy Dingemanse, [c.dingemanse@comites.nl](mailto:cathy.dingemanse@rvig.nl)
-* Customer zero: Melvin Lee, [melvin.lee@iswish.nl](mailto:melvin.lee@rvig.nl)
-* Tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@rvig.nl)
+* Product Owner: Cathy Dingemanse, [cathy.dingemanse@rvig.nl](mailto:cathy.dingemanse@rvig.nl)
+* Customer zero: Melvin Lee, [melvin.lee@rvig](mailto:melvin.lee@rvig.nl)
+* Tester: Frank Samwel, [frank.samwel@rvig.nl](mailto:frank.samwel@rvig.nl)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
