@@ -41,5 +41,7 @@ Deze repo bevat scripts waarmee je met [OpenAPI Generator](https://openapi-gener
 
 Een lijst met andere ondersteunde generator opties kun je vinden in de [Generators List](https://openapi-generator.tech/docs/generators){:target="_blank" rel="noopener"} van OpenAPI Generator.
 
-Note. De prerequisite van OpenAPI Generator is JAVA. Je moet een JAVA runtime installeren voordat je OpenAPI Generator kunt gebruiken
-  
+Note. De prerequisite van OpenAPI Generator is JAVA. Je moet een JAVA runtime installeren voordat je OpenAPI Generator kunt gebruiken.
+
+## Uitproberen en testen
+Vraag jouw gemeente naar demo- en testomgevingen die zij voor hun afnemers beschikbaar stellen.
