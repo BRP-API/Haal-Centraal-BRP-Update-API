@@ -8,8 +8,6 @@ title: Haal Centraal BRP tabellen bevragen
 
 Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van personen. Bedoeld voor gebruik in combinatie met de [BRP bevragen API](https://BRP-API.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"} om (tijdelijk) lokale kopiegegevens bij afnemers actueel te houden. Zo kun je de transitie naar API's versnellen en je distributiesysteem of gegevensmagazijn uitfaseren. De API wordt niet door RvIG aangeboden. 
 
-<b>Tips over hoe je de update API snel en slim in jouw gemeente aanbiedt, vind je in het [filmpje Snel in business met de Update API](https://youtu.be/3oJRzRJdQeA).</b>
-
 ## Direct uitproberen?
 * Bekijk de specificaties met [Swagger UI](swagger-ui) of [Redoc](redoc)
 * Lees de [Getting started](getting-started)
