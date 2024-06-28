@@ -14,7 +14,6 @@ Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van p
 * Bekijk de specificaties met [Swagger UI](swagger-ui) of [Redoc](redoc)
 * Lees de [Getting started](getting-started)
 * Download de [technische specificaties](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}
-* Vraag een API-key voor toegang tot de Haal Centraal probeeromgeving aan bij de product owner [c.dingemanse@comites.nl](mailto:c.dingemanse@comites.nl)
 
 ## Heb je meer nodig? 
 Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://BRP-API.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"} om de gewijzigde gegevens van een persoon op te halen.
@@ -32,11 +31,9 @@ Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://BRP-AP
 * Verbeteringen doorgeven
   [Maak een verbeter issue aan >>](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
 
-* Product Owner: Cathy Dingemanse, [c.dingemanse@comites.nl](mailto:c.dingemanse@comites.nl)
-* Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
-* Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
-* Customer zero: Melvin Lee, [melvin.lee@iswish.nl](mailto:melvin.lee@iswish.nl)
-* Tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@denhaag.nl)
+* Product Owner: Cathy Dingemanse, [c.dingemanse@comites.nl](mailto:cathy.dingemanse@rvig.nl)
+* Customer zero: Melvin Lee, [melvin.lee@iswish.nl](mailto:melvin.lee@rvig.nl)
+* Tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@rvig.nl)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
