@@ -6,7 +6,7 @@ title: Haal Centraal BRP tabellen bevragen
 ![lint oas](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/workflows/lint-oas/badge.svg)
 ![ci](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/workflows/ci/badge.svg)
 
-Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van personen. Bedoeld voor gebruik in combinatie met de [BRP bevragen API](https://BRP-API.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"} om (tijdelijk) lokale kopiegegevens bij afnemers actueel te houden. Zo kun je de transitie naar API's versnellen en je distributiesysteem of gegevensmagazijn uitfaseren. De API wordt niet door RvIG aangeboden. 
+Migratie API waarmee je je kunt abonneren op notificaties over wijzigingen van personen. Bedoeld voor gebruik in combinatie met de [BRP bevragen API](https://BRP-API.github.io/Haal-Centraal-BRP-bevragen){:target="_blank" rel="noopener"} om (tijdelijk) lokale kopiegegevens bij afnemers actueel te houden. Zo kun je de transitie naar API's versnellen en je distributiesysteem of gegevensmagazijn uitfaseren. De API wordt niet door RvIG aangeboden, maar lokaal door gemeenten.
 
 ## Direct uitproberen?
 * Bekijk de specificaties met [Swagger UI](swagger-ui) of [Redoc](redoc)
