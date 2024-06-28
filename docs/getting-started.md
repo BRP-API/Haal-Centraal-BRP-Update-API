@@ -9,7 +9,7 @@ Wil je de API gebruiken? Dit kun je doen:
 
 1. Bekijk de [functionaliteit en specificaties](#functionaliteit-en-specificaties)
 2. [Implementeer de API Client](#implementeer-de-api-client)
-3. [Probeer en test de API](#probeer-en-test-de-api)
+
 
 ## Functionaliteit en specificaties
 Met deze API kun je een lokale kopie actueel houden. Je kunt beheren welke personen je wilt volgen, en opvragen van welke gevolgde personen gegevens zijn gewijzigd vanaf een bepaalde datum.
