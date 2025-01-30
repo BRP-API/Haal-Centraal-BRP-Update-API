@@ -25,6 +25,13 @@ paths:
       summary: "Raadpleeg actieve volgindicaties"
       description: |
         Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden.
+      parameters:
+        - $ref: "#/components/parameters/X_User"
+          required: true
+        - $ref: "#/components/parameters/X_Correlation_ID"
+          required: true
+        - $ref: "#/components/parameters/X_Task_Description"
+          required: true
       responses:
         "200":
           description: "OK"
@@ -59,6 +66,12 @@ paths:
       summary: "Raadpleeg een volgindicatie op een persoon"
       parameters:
         - $ref: "#/components/parameters/burgerservicenummer"
+        - $ref: "#/components/parameters/X_User"
+          required: true
+        - $ref: "#/components/parameters/X_Correlation_ID"
+          required: true
+        - $ref: "#/components/parameters/X_Task_Description"
+          required: true
       responses:
         "200":
           description: "OK"
@@ -98,6 +111,12 @@ paths:
       summary: "Plaats, wijzig of beëindig een volgindicatie"
       parameters:
         - $ref: "#/components/parameters/burgerservicenummer"
+        - $ref: "#/components/parameters/X_User"
+          required: true
+        - $ref: "#/components/parameters/X_Correlation_ID"
+          required: true
+        - $ref: "#/components/parameters/X_Task_Description"
+          required: true
       requestBody:
         content:
           application/json:
@@ -159,6 +178,12 @@ paths:
           schema:
             type: "string"
             format: "date"
+        - $ref: "#/components/parameters/X_User"
+          required: true
+        - $ref: "#/components/parameters/X_Correlation_ID"
+          required: true
+        - $ref: "#/components/parameters/X_Task_Description"
+          required: true
       responses:
         "200":
           description: "OK"
@@ -202,6 +227,12 @@ paths:
           schema:
             type: "string"
             format: "date"
+        - $ref: "#/components/parameters/X_User"
+          required: true
+        - $ref: "#/components/parameters/X_Correlation_ID"
+          required: true
+        - $ref: "#/components/parameters/X_Task_Description"
+          required: true
       responses:
         "200":
           description: "OK"
@@ -242,6 +273,33 @@ components:
         maxLength: 9
         minLength: 9
         example: "555555021"
+    X_User:
+      in: header
+      name: X-User
+      schema:
+        type: string
+      description:
+        "gebruikersnaam of identificatie binnen de bevragende applicatie; bij voorkeur\
+        \ EntraID UPN als hiervan gebruik gemaakt wordt, anders email adres, en anders een account ID"
+    X_Correlation_ID:
+      in: header
+      name: X-Correlation-ID
+      schema:
+        type: string
+      description:
+        "session/correlation ID, dient te worden aangegeven door de afnemende applicatie als\
+        \ koppeling naar de logging die wordt gedaan in de applicatie zelf; doelstelling is\
+        \ om specifieke logging van de applicatie te kunnen koppelen aan de bevragingen die zijn uitgevoerd"
+    X_Task_Description:
+      in: header
+      name: X-Task-Description
+      schema:
+        type: string
+        description:
+          "gebruikstaakaanduiding, dient te worden aangegeven door de afnemende applicatie; dit is\
+          \ een vrije tekst en hierover zullen afspraken vastleggen in de transparantiedocumentatie;\
+          \ het is vooral een hulpmiddel om taken die binnen de applicatie worden uitgevoerd in het\
+          \ kader van protocollering meteen al vast te leggen"
   schemas:
     VolgindicatieCollectie:
       type: object
