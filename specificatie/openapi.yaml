@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-# Added by API Auto Mocking Plugin
+  # Added by API Auto Mocking Plugin
   - description: "Haal Centraal proefomgeving"
     url: https://www.haalcentraal.nl/haalcentraal/api/brpupdate
 info:
@@ -26,7 +26,7 @@ paths:
       description: |
         Vraag de actieve volgindicaties op van een abonnee. Levert geen volgindicaties met einddatum vandaag of in het verleden.
       responses:
-        '200':
+        "200":
           description: "OK"
           headers:
             api-version:
@@ -37,20 +37,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/VolgindicatieCollectie"
-        '401':
+        "401":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/401"
-        '403':
+        "403":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/403"
-        '406':
+        "406":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/406"
-        '500':
+        "500":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/500"
-        '503':
+        "503":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/503"
-        'default':
+        "default":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/default"
       tags:
-      - Beheren volgindicaties
+        - Beheren volgindicaties
   /volgindicaties/{burgerservicenummer}:
     get:
       operationId: GetVolgindicatie
@@ -58,9 +58,9 @@ paths:
         Vraag een volgindicatie op van een specifieke persoon.
       summary: "Raadpleeg een volgindicatie op een persoon"
       parameters:
-        - $ref: '#/components/parameters/burgerservicenummer'
+        - $ref: "#/components/parameters/burgerservicenummer"
       responses:
-        '200':
+        "200":
           description: "OK"
           headers:
             api-version:
@@ -71,24 +71,24 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/VolgindicatieRaadplegen"
-        '400':
+        "400":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/400"
-        '401':
+        "401":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/401"
-        '403':
+        "403":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/403"
-        '404':
+        "404":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/404"
-        '406':
+        "406":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/406"
-        '500':
+        "500":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/500"
-        '503':
+        "503":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/503"
-        'default':
+        "default":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/default"
       tags:
-      - Beheren volgindicaties
+        - Beheren volgindicaties
     put:
       operationId: UpsertVolgindicatie
       description: |
@@ -97,14 +97,14 @@ paths:
         Beëindig een volgindicatie door een einddatum gelijk aan de datum van vandaag te sturen.
       summary: "Plaats, wijzig of beëindig een volgindicatie"
       parameters:
-        - $ref: '#/components/parameters/burgerservicenummer'
+        - $ref: "#/components/parameters/burgerservicenummer"
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Volgindicatie'
+              $ref: "#/components/schemas/Volgindicatie"
       responses:
-        '200':
+        "200":
           description: "Volgindicatie gewijzigd"
           headers:
             api-version:
@@ -115,7 +115,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/VolgindicatieRaadplegen"
-        '201':
+        "201":
           description: "Volgindicatie toegevoegd"
           headers:
             api-version:
@@ -125,25 +125,25 @@ paths:
           content:
             application/hal+json:
               schema:
-                $ref: '#/components/schemas/VolgindicatieRaadplegen'
-        '400':
+                $ref: "#/components/schemas/VolgindicatieRaadplegen"
+        "400":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/400"
-        '401':
+        "401":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/401"
-        '403':
+        "403":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/403"
-        '406':
+        "406":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/406"
-        '415':
+        "415":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/415"
-        '500':
+        "500":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/500"
-        '503':
+        "503":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/503"
-        'default':
+        "default":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/default"
       tags:
-      - Beheren volgindicaties
+        - Beheren volgindicaties
   /wijzigingen:
     get:
       operationId: GetGewijzigdePersonen
@@ -160,7 +160,7 @@ paths:
             type: "string"
             format: "date"
       responses:
-        '200':
+        "200":
           description: "OK"
           headers:
             api-version:
@@ -171,22 +171,65 @@ paths:
             application/hal+json:
               schema:
                 $ref: "#/components/schemas/GewijzigdePersonenHalCollectie"
-        '400':
+        "400":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/400"
-        '401':
+        "401":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/401"
-        '403':
+        "403":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/403"
-        '406':
+        "406":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/406"
-        '500':
+        "500":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/500"
-        '503':
+        "503":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/503"
-        'default':
+        "default":
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/default"
       tags:
-      - Raadplegen gewijzigde personen
+        - Raadplegen gewijzigde personen
+  /nieuwe-ingezetenen:
+    get:
+      operationId: GetNieuweIngezetenen
+      description: |
+        Vraag een lijst op met burgerservicenummers van personen die nieuw ingezetene zijn binnen een vastgesteld gebied (bijvoorbeeld gemeente)
+      summary: "Raadpleeg personen die nieuw ingezetene zijn"
+      parameters:
+        - in: query
+          name: vanaf
+          required: true
+          explode: false
+          description: Alleen personen die ingezetene zijn geworden op of na deze datum worden geleverd.
+          schema:
+            type: "string"
+            format: "date"
+      responses:
+        "200":
+          description: "OK"
+          headers:
+            api-version:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/headers/api_version"
+            warning:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/headers/warning"
+          content:
+            application/hal+json:
+              schema:
+                $ref: "#/components/schemas/NieuweIngezetenenHalCollectie"
+        "400":
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/400"
+        "401":
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/401"
+        "403":
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/403"
+        "406":
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/406"
+        "500":
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/500"
+        "503":
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/503"
+        "default":
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/default"
+      tags:
+        - Raadplegen nieuwe ingezetenen
 components:
   parameters:
     burgerservicenummer:
@@ -206,7 +249,7 @@ components:
         volgindicaties:
           type: array
           items:
-            $ref: '#/components/schemas/VolgindicatieRaadplegen'
+            $ref: "#/components/schemas/VolgindicatieRaadplegen"
     Volgindicatie:
       type: object
       properties:
@@ -216,7 +259,7 @@ components:
           description: "Datum vanaf wanneer de volgindicatie niet meer actief zal zijn."
     VolgindicatieRaadplegen:
       allOf:
-        - $ref: '#/components/schemas/Volgindicatie'
+        - $ref: "#/components/schemas/Volgindicatie"
         - properties:
             begindatum:
               type: "string"
@@ -234,10 +277,31 @@ components:
           type: array
           items:
             type: "string"
-            description: "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet\
+            description:
+              "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet\
               \ algemene bepalingen burgerservicenummer."
             example: "555555021"
     GewijzigdePersonenHalCollectionLinks:
+      type: object
+      properties:
+        self:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        ingeschrevenPersoon:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+    NieuweIngezetenenHalCollectie:
+      type: object
+      properties:
+        _links:
+          $ref: "#/components/schemas/NieuweIngezetenenHalCollectionLinks"
+        burgerservicenummers:
+          type: array
+          items:
+            type: "string"
+            description:
+              "Identificerend gegeven van een ingeschreven natuurlijk persoon, als bedoeld in artikel 1.1 van de Wet\
+              \ algemene bepalingen burgerservicenummer."
+            example: "555555021"
+    NieuweIngezetenenHalCollectionLinks:
       type: object
       properties:
         self:
