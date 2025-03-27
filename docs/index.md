@@ -3,6 +3,7 @@ layout: page-with-side-nav
 title: Haal Centraal BRP tabellen bevragen
 ---
 # Haal Centraal BRP update API
+# Geen RvIG product, API specificaties voor lokale implementatie bij gemeenten!
 ![lint oas](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/workflows/lint-oas/badge.svg)
 ![ci](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/workflows/ci/badge.svg)
 
@@ -22,16 +23,6 @@ Gebruik de BRP update API in combinatie met de [BRP bevragen API](https://BRP-AP
 * [API Design Visie](https://github.com/Geonovum/KP-APIs/blob/master/overleggen/Werkgroep%20API%20design%20visie/API%20Design%20Visie.md){:target="_blank" rel="noopener"}
 * [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/){:target="_blank" rel="noopener"}
 
-## Contact
-
-* Bug Melden
-  [Maak een bug issue aan >>](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
-* Verbeteringen doorgeven
-  [Maak een verbeter issue aan >>](https://github.com/BRP-API/Haal-Centraal-BRP-Update-API/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
-
-* Product Owner: Cathy Dingemanse, [cathy.dingemanse@rvig.nl](mailto:cathy.dingemanse@rvig.nl)
-* Customer zero: Melvin Lee, [melvin.lee@rvig](mailto:melvin.lee@rvig.nl)
-* Tester: Frank Samwel, [frank.samwel@rvig.nl](mailto:frank.samwel@rvig.nl)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
